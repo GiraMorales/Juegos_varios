@@ -7,24 +7,6 @@ export default class Segundo_Nivel extends Phaser.Scene {
   init() {
     this.scoreboard = new Scoreboard(this);
   }
-  preload() {
-    this.load.image(
-      'naranja',
-      'https://res.cloudinary.com/dvoady6dt/image/upload/v1725475038/assets/orange.png'
-    );
-    this.load.image(
-      'badgraund',
-      'https://res.cloudinary.com/dvoady6dt/image/upload/v1725475038/assets/fondo.png'
-    );
-    this.load.image(
-      'exprimidor',
-      'https://res.cloudinary.com/dvoady6dt/image/upload/v1725475037/assets/exprimidor.png'
-    );
-    this.load.image(
-      'ball',
-      'https://res.cloudinary.com/dvoady6dt/image/upload/v1725475037/assets/bola.png'
-    );
-  }
 
   create() {
     //fondo
@@ -74,7 +56,7 @@ export default class Segundo_Nivel extends Phaser.Scene {
     //para que rebote con la misma fuerza que cae
     this.ball.setBounce(1);
 
-    //cochar la bola con los malos
+    //chocaar la bola con los malos
     this.physics.add.collider(this.ball, this.zumos, this.hitzumos, null, this);
 
     //grupo de malos puesto en una regilla

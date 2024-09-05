@@ -3,24 +3,7 @@ export default class GameOver extends Phaser.Scene {
     super({ key: 'GameOver' });
   }
 
-  preload() {
-    this.load.image(
-      'fondo',
-      'https://res.cloudinary.com/dvoady6dt/image/upload/v1725475038/assets/fondo.png'
-    );
-    this.load.image(
-      'gameover',
-      'https://res.cloudinary.com/dvoady6dt/image/upload/v1725475038/assets/gameOver.png'
-    );
-    this.load.image(
-      'botonin',
-      'https://res.cloudinary.com/dvoady6dt/image/upload/v1725475037/assets/botonInicio.png'
-    );
-    this.load.image(
-      'botonju',
-      'https://res.cloudinary.com/dvoady6dt/image/upload/v1725475037/assets/botonJugar.png'
-    );
-  }
+  preload() {}
 
   create() {
     this.add.image(0, 0, 'fondo').setOrigin(0, 0);

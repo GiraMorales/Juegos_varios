@@ -5,8 +5,11 @@ export default class MenuInicio extends Phaser.Scene {
     super({ key: 'MenuInicio', active: true });
   }
   preload() {
+    this.load.on('complete', () => {
+      this.scene.start(MenuInicio);
+    });
     this.load.image(
-      'paisaje',
+      'badgraund',
       'https://res.cloudinary.com/dvoady6dt/image/upload/v1725475038/assets/fondo.png'
     );
     this.load.image(
@@ -69,11 +72,11 @@ export default class MenuInicio extends Phaser.Scene {
       this.scene.start('GameOver');
     });
 
-    particulas;
-    const p = this.add.particles('particle');
-    const emitter = p.createEmitter();
-    emitter.setPosition(340, 300);
-    emitter.setSpeed(300);
-    emitter.setBlendMode(Phaser.BlendModes.ADD);
+    // particulas
+    // const p = this.add.particles('particle');
+    // const emitter = p.createEmitter();
+    // emitter.setPosition(340, 300);
+    // emitter.setSpeed(300);
+    // emitter.setBlendMode(Phaser.BlendModes.ADD);
   }
 }

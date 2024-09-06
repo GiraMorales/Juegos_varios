@@ -1,4 +1,4 @@
-import { Scoreboard } from '../gameObjects/Scoreboard.js';
+// import { Scoreboard } from '../gameObjects/Scoreboard.js';
 import '../init.js';
 import '../bootloader.js/';
 export default class Primer_Nivel extends Phaser.Scene {
@@ -90,9 +90,9 @@ export default class Primer_Nivel extends Phaser.Scene {
 
     //posición del exprimidor y escala
     this.malos = this.physics.add.staticGroup();
-    this.malos.create(520, 237, 'exprimidor').setScale(2);
-    this.malos.create(315, 445, 'exprimidor').setScale(1.5);
-    this.malos.create(602, 605, 'exprimidor').setScale(2);
+    this.malos.create(520, 237, 'malo').setScale(2);
+    this.malos.create(315, 445, 'malo').setScale(1.5);
+    this.malos.create(602, 605, 'malo').setScale(2);
 
     //colisiones con las estrellas
     this.physics.add.overlap(
@@ -104,13 +104,7 @@ export default class Primer_Nivel extends Phaser.Scene {
     );
 
     //colisionar con los malos
-    this.physics.add.collider(
-      this.player,
-      this.exprimidor,
-      this.hitMalo,
-      null,
-      this
-    );
+    this.physics.add.collider(this.player, this.malo, this.hitMalo, null, this);
 
     //Game over
     this.gameoverImage = this.add.image(340, 350, 'gameover').setScale(0.7, 1);
@@ -178,11 +172,11 @@ export default class Primer_Nivel extends Phaser.Scene {
     this.puntoSound.play();
   }
 
-  hitMalo(_player, exprimidor) {
+  hitMalo(_player, malo) {
     // physics.pause();
     this.perderSound.play();
 
-    exprimidor.disableBody(true, true);
+    malo.disableBody(true, true);
     this.restarVidas > 0;
     this.score2 -= 1;
     this.liveCounter.setText('vidas: ' + this.score2);

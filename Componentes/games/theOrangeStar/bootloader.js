@@ -1,3 +1,5 @@
+import Primer_Nivel from './scenes/primer_nivel.js';
+
 export default class Bootloader extends Phaser.Scene {
   constructor() {
     super({ key: 'Bootloader' });
@@ -55,5 +57,22 @@ export default class Bootloader extends Phaser.Scene {
     this.load.on('complete', () => {
       console.log('Load complete');
     });
+  }
+
+  create() {
+    this.input.once(
+      'pointerdown',
+      () => {
+        const audioContext = Phaser.Sound.BaseSoundManager.context;
+
+        // Verificar si el contexto está suspendido y reanudarlo
+        if (audioContext.state === 'suspended') {
+          audioContext.resume().then(() => {
+            console.log('AudioContext reanudado después del clic del usuario');
+          });
+        }
+      },
+      this
+    );
   }
 }

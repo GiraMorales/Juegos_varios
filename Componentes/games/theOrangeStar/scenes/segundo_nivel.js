@@ -61,7 +61,7 @@ export default class Segundo_Nivel extends Phaser.Scene {
 
     //grupo de malos puesto en una regilla
     this.zumos = this.physics.add.staticGroup({
-      key: ['exprimidor', 'exprimidor', 'exprimidor', 'exprimidor'],
+      key: ['malo', 'malo', 'malo', 'malo'],
       frameQuantity: 5,
       gridAlign: {
         width: 10,
@@ -111,7 +111,7 @@ export default class Segundo_Nivel extends Phaser.Scene {
       this.ball.setData('glue', false);
     }
   }
-  hitzumos(_ball, _exprimidor) {
+  hitzumos(_ball, _malo) {
     this.scoreboard.incrementPoints(10);
     //this.score++;
     // this.scoreText.setText ('PUNTOS: ' + this.score);

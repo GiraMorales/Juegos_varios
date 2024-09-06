@@ -1,0 +1,8 @@
+footer {
+  display: block;
+  position: absolute;
+  margin-top: 90%;
+  color: var(--3jr-secondary);
+  font-size: var(--3jr-fontsize-l);
+  letter-spacing: var(--3jr-margin-xs);
+}

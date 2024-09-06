@@ -1,17 +1,17 @@
 header {
   display: flex;
-  width: 100%;
-  padding: 10%;
+  padding: var(--3jr-padding-sx);
   justify-content: space-around;
   align-items: center;
-  gap: 5%;
+  gap: var(--3jr-gap-xs);
   flex-wrap: wrap;
 }
 
 header button {
-  padding: 10px 20px;
+  padding: var(--3jr-padding-s) var(--3jr-padding-m);
   border-radius: 10px;
-  font-size: 25px;
-  background-color: darkolivegreen;
-  margin: 10px;
+  font-size: var(--3jr-fontsize-xl);
+  background-color: var(--3jr-botton);
+  margin: var(--3jr-margin-sx);
+  color: var(--3jr-letterbotton);
 }

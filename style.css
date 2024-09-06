@@ -6,20 +6,52 @@
   font-family: 'Jersey 15', sans-serif;
 }
 
+:root {
+  --3jr-color-background: #4d3e93;
+  --3jr-primary: #ffffff;
+  --3jr-secondary: #eace00;
+  --3jr-botton: #aae815;
+  --3jr-logo: #1560e8;
+  --3jr-letterbotton: #3a15e8;
+
+  /*BORDER RADIUS*/
+  --3jr-border-radius: 10px;
+
+  /* FONTSIZE */
+  --3jr-fontsize-xs: 10px;
+  --3jr-fontsize-s: 20px;
+  --3jr-fontsize-m: 30px;
+  --3jr-fontsize-l: 70px;
+  --3jr-fontsize-xl: 90px;
+
+  /*SPACINGS*/
+  --3jr-margin-sx: 5px;
+  --3jr-margin-s: 10px;
+  --3jr-margin-m: 20px;
+  --3jr-margin-l: 30px;
+  --3jr-margin-xl: 40px;
+
+  --3jr-padding-xs: 5px;
+  --3jr-padding-s: 10px;
+  --3jr-padding-m: 20px;
+  --3jr-padding-l: 30px;
+  --3jr-padding-xl: 40px;
+
+  --3jr-gap-xs: 5px;
+  --3jr-gap-s: 10px;
+  --3jr-gap-m: 20px;
+  --3jr-gap-l: 30px;
+  --3jr-gap-xl: 40px;
+}
+
 #contenedor {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
-}
-body {
-  background-color: blue;
-}
-
-footer {
+  height: 100svh;
   background-color: aqua;
 }
 
-header {
-  background-color: blueviolet;
+body {
+  background-color: var(--3jr-color-background);
 }

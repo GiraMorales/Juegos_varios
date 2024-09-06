@@ -5,12 +5,15 @@ header {
   align-items: center;
   gap: var(--3jr-gap-xs);
   flex-wrap: wrap;
+  height: 20%;
+  width: 100%;
+  margin-bottom: auto;
 }
 
 header button {
-  padding: var(--3jr-padding-s) var(--3jr-padding-m);
+  padding: var(--3jr-padding-s) var(--3jr-padding-s);
   border-radius: 10px;
-  font-size: var(--3jr-fontsize-xl);
+  font-size: var(--3jr-fontsize-l);
   background-color: var(--3jr-botton);
   margin: var(--3jr-margin-sx);
   color: var(--3jr-letterbotton);

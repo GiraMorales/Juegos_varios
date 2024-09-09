@@ -43,19 +43,8 @@
   font-family: 'Jersey 15', sans-serif;
 }
 
-/* #contenedor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100svh;
-  background-color: aqua;
-} */
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  height: 600px;
-  width: 600px;
+.portada {
+  width: 300%;
 }
 
 body {

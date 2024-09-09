@@ -1,8 +1,9 @@
 footer {
-  display: block;
+  display: flex;
   position: absolute;
-  margin-top: 90%;
   color: var(--3jr-secondary);
-  font-size: var(--3jr-fontsize-l);
+  font-size: var(--3jr-fontsize-m);
   letter-spacing: var(--3jr-margin-xs);
+  justify-content: center;
+  width: 100%;
 }

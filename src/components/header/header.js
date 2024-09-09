@@ -5,7 +5,7 @@ import './header.css';
 
 export const header = (divContenedor) => {
   //crear elementos
-  const header = document.createElement('header');
+  const headerElement = document.createElement('header');
   const buttonTER = document.createElement('button');
   const buttonMMR = document.createElement('button');
   const buttonTOS = document.createElement('button');
@@ -16,13 +16,18 @@ export const header = (divContenedor) => {
   buttonTOS.textContent = 'The Orange Star';
 
   //funcionalidad del boton
-  buttonTER.addEventListener('click', initTresEnRaya);
+  buttonTER.addEventListener('click', initTresEnRaya, '.visible');
   buttonMMR.addEventListener('click', initMemory);
   buttonTOS.addEventListener('click', initTheOrangeStar);
 
+  // Alternar visibilidad del header
+  buttonTER.addEventListener('click', () => {
+    headerElement.classList.toggle('hidden');
+  });
+
   //poner los elementos creador en el html
-  header.append(buttonTER);
-  header.append(buttonMMR);
-  header.append(buttonTOS);
-  divContenedor.append(header);
+  headerElement.append(buttonTER);
+  headerElement.append(buttonMMR);
+  headerElement.append(buttonTOS);
+  divContenedor.append(headerElement);
 };

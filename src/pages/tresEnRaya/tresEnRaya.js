@@ -1,4 +1,4 @@
-import { logicaTER } from './logicaJuego';
+import { logicaTER, reiniciarJuego } from './logicaJuego';
 import './tresEnRaya.css';
 
 export const initTresEnRaya = () => {
@@ -7,51 +7,47 @@ export const initTresEnRaya = () => {
 
   //crear un titulo, boton y tablero
   const titulo = document.createElement('h1');
-  titulo.textContent = 'Tres en Raya';
-  const buttonInicio = document.createElement('button');
-  buttonInicio.textContent = 'Nuevo Juego';
+  const buttonJugar = document.createElement('button');
+  const buttonSalir = document.createElement('button');
   const divTablero = document.createElement('div');
+
+  //añadir texto
+  titulo.textContent = 'Tres en Raya';
+  buttonJugar.textContent = 'Nuevo Juego';
+  buttonSalir.textContent = 'SALIR';
+
+  //añadir clases
   divTablero.className = 'tablero';
+  buttonJugar.className = 'inicio';
+  buttonSalir.className = 'salir';
 
   //limpiar el contenido
-  divContent.innerHTML;
+  divContent.innerHTML = '';
 
   //añadir los elementos
-  divContent.append(titulo, buttonInicio, divTablero);
-
-  // buttonInicio.addEventListener('click', () => {
-  //   reiniciarJuego(divTablero);
-  // });
+  divContent.append(titulo);
+  divContent.append(buttonJugar);
+  divContent.append(divTablero);
+  divContent.append(buttonSalir);
 
   //creación de celdas del tablero
   for (let i = 0; i < 9; i++) {
     const celda = document.createElement('div');
     celda.className = 'celda'; // Clase para las celdas
-    celda.style.width = '100px';
-    celda.style.height = '100px';
-    celda.style.border = '1px solid black';
-    celda.style.display = 'flex';
-    celda.style.justifyContent = 'center';
-    celda.style.alignItems = 'center';
-    celda.style.fontSize = '2rem';
-    celda.style.cursor = 'pointer';
-
-    //click de las celdas
-    // celda.addEventListener('click', () => {
-    //   if (celda.textContent === '') {
-    //     celda.textContent = 'X'; // Aquí se puede implementar la lógica del juego más tarde
-    //   }
-    // });
+    // Vincular la lógica del juego a cada celda
+    celda.addEventListener('click', () => {
+      logicaTER(celda, i); // Lógica del juego
+    });
 
     divTablero.appendChild(celda); // Añadir cada celda al tablero
   }
-};
-// Función para reiniciar el juego
-const reiniciarJuego = (divTablero) => {
-  const celdas = divTablero.querySelectorAll('.celda');
-  celdas.forEach((celda) => {
-    celda.textContent = ''; // Limpiar las celdas
+  // Evento para reiniciar el juego
+  buttonJugar.addEventListener('click', () => {
+    reiniciarJuego(divTablero); // Reinicia el juego
+  });
+
+  //reiniciar la pantalla
+  buttonSalir.addEventListener('click', () => {
+    window.location.reload(); // Recarga la página
   });
 };
-
-logicaTER();

@@ -1,0 +1,15 @@
+.tablero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 600px;
+  width: 600px;
+  border-radius: 10px;
+  border-color: blue;
+  margin: auto;
+  margin-top: var(--3jr-margin-xl);
+}
+
+.tablero h1 {
+  font-size: var(--3jr-fontsize-xl);
+}

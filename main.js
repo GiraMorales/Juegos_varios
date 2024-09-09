@@ -8,4 +8,10 @@ const divContenedor = document.querySelector('#contenedor');
 
 header(divContenedor);
 
+const divContent = document.createElement('div');
+
+divContent.className = 'content';
+
+divContenedor.append(divContent);
+
 footer(divContenedor);

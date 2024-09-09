@@ -15,6 +15,6 @@ header button {
   border-radius: 10px;
   font-size: var(--3jr-fontsize-l);
   background-color: var(--3jr-botton);
-  margin: var(--3jr-margin-sx);
+  margin: var(--3jr-margin-m);
   color: var(--3jr-letterbotton);
 }

@@ -1,3 +1,6 @@
+import { initMemory } from '../../pages/memory/memory';
+import { initTheOrangeStar } from '../../pages/The Orange Star/TheOrangeStar';
+import { initTresEnRaya } from '../../pages/tresEnRaya/tresEnRaya';
 import './header.css';
 
 export const header = (divContenedor) => {
@@ -11,6 +14,11 @@ export const header = (divContenedor) => {
   buttonTER.textContent = 'Tres en Raya';
   buttonMMR.textContent = 'Memory';
   buttonTOS.textContent = 'The Orange Star';
+
+  //funcionalidad del boton
+  buttonTER.addEventListener('click', initTresEnRaya);
+  buttonMMR.addEventListener('click', initMemory);
+  buttonTOS.addEventListener('click', initTheOrangeStar);
 
   //poner los elementos creador en el html
   header.append(buttonTER);

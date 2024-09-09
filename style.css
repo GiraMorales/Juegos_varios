@@ -1,11 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Jersey 15', sans-serif;
-}
-
 :root {
   --3jr-color-background: #4d3e93;
   --3jr-primary: #ffffff;
@@ -44,14 +37,28 @@
   --3jr-gap-xl: 40px;
 }
 
-#contenedor {
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jersey 15', sans-serif;
+}
+
+/* #contenedor {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100svh;
   background-color: aqua;
+} */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 600px;
+  width: 600px;
 }
 
 body {
   background-color: var(--3jr-color-background);
+  min-height: 100svh;
 }

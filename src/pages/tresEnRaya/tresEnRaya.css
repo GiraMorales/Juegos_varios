@@ -22,7 +22,7 @@
   cursor: pointer;
 }
 
-.content {
+.grid {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -31,7 +31,7 @@
   width: 600px;
 }
 
-.content h1 {
+.grid h1 {
   font-size: var(--3jr-fontsize-l);
   margin: 40px 100px;
   display: flex;
@@ -44,7 +44,7 @@
   background-color: blue;
 }
 
-.content button {
+.grid button {
   display: flex;
   position: absolute;
   margin-top: 130px;
@@ -56,4 +56,8 @@
   justify-content: center;
   background-color: var(--3jr-botton);
   color: var(--3jr-letterbotton);
+}
+
+.combinacionGanadora {
+  background-color: red;
 }

@@ -20,6 +20,7 @@ export const initTresEnRaya = () => {
   divTablero.className = 'tablero';
   buttonJugar.className = 'inicio';
   buttonSalir.className = 'salir';
+  divContent.className = 'grid';
 
   //limpiar el contenido
   divContent.innerHTML = '';

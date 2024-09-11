@@ -12,7 +12,7 @@ header(divContenedor);
 const divContent = document.createElement('div');
 const portada = document.createElement('img');
 portada.src =
-  'https://res.cloudinary.com/dvoady6dt/image/upload/v1725897797/assets/qkdrkvox1tqx7q22nyvn.jpg';
+  'https://res.cloudinary.com/dvoady6dt/image/upload/v1725898643/assets/nkuxyn2yrixprzoxqfv2.png';
 
 divContent.className = 'content';
 portada.className = 'portada';

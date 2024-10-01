@@ -17,11 +17,14 @@ export const header = (divContenedor) => {
 
   //funcionalidad del boton
   buttonTER.addEventListener('click', initTresEnRaya, '.visible');
-  buttonMMR.addEventListener('click', initMemory);
+  buttonMMR.addEventListener('click', initMemory, '.visible');
   buttonTOS.addEventListener('click', initTheOrangeStar);
 
   // Alternar visibilidad del header
   buttonTER.addEventListener('click', () => {
+    headerElement.classList.toggle('hidden');
+  });
+  buttonMMR.addEventListener('click', () => {
     headerElement.classList.toggle('hidden');
   });
 

@@ -1,5 +1,6 @@
 import { logicaTER, reiniciarJuego } from './logicaJuegoTER';
 import '../../pages/stylesGames.css';
+import './stylesTER.css';
 
 export const initTresEnRaya = () => {
   //Seleccionar el contendor

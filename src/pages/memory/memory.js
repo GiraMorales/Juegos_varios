@@ -1,21 +1,5 @@
 import '../../pages/stylesgames.css';
-
-const fichas = [
-  '👾',
-  '👽',
-  '👻',
-  '🤖',
-  '🐱‍👤',
-  '🕸',
-  '✨',
-  '🎯',
-  '🧩',
-  '🎹',
-  '🎪',
-  '🧶'
-];
-
-console.log(fichas);
+import './stylesMMR.css';
 
 export const initMemory = () => {
   // Seleccionar el contenedor
@@ -25,7 +9,7 @@ export const initMemory = () => {
   const buttonRepartir = document.createElement('button');
   const buttonSalir = document.createElement('button');
   const divTablero = document.createElement('div');
-  const divtarjetas = document.createAttribute('div');
+  const divtarjetas = document.createElement('div');
 
   //añadir texto
   titulo.textContent = 'Memory';
@@ -48,6 +32,15 @@ export const initMemory = () => {
   divContent.append(divTablero);
   divContent.append(buttonSalir);
   divTablero.append(divtarjetas);
+
+  //creación de tarjetas en el tablero
+  const reparteTarjetas = (fichas) => {
+    fichas.forEach((element) => {
+      console.log(element);
+    });
+  };
+
+  reparteTarjetas();
 
   // Evento para reiniciar el juego
   buttonRepartir.addEventListener('click', () => {

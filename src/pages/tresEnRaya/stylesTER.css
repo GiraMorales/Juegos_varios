@@ -1,0 +1,22 @@
+.tablero {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 600px;
+  width: 600px;
+  border-radius: 10px;
+  border-color: blue;
+  margin: auto;
+  margin-top: 250px;
+  border-width: 1px;
+  border: solid;
+}
+
+.celda {
+  border: 5px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--3jr-fontsize-xl);
+  cursor: pointer;
+}

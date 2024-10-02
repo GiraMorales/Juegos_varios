@@ -1,7 +1,4 @@
 .tablero {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
   height: 600px;
   width: 600px;
   border-radius: 10px;
@@ -12,20 +9,11 @@
   border: solid;
 }
 
-.celda {
-  border: 5px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--3jr-fontsize-xl);
-  cursor: pointer;
-}
-
 .grid {
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; */
   height: 850px;
   width: 600px;
 }
@@ -42,7 +30,6 @@
 
 .salir {
   margin-left: 450px;
-  background-color: blue;
 }
 
 .grid button {

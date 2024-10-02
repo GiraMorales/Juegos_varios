@@ -1,4 +1,4 @@
-import './memory.css';
+import '../../pages/stylesgames.css';
 
 const fichas = [
   '👾',
@@ -25,6 +25,7 @@ export const initMemory = () => {
   const buttonRepartir = document.createElement('button');
   const buttonSalir = document.createElement('button');
   const divTablero = document.createElement('div');
+  const divtarjetas = document.createAttribute('div');
 
   //añadir texto
   titulo.textContent = 'Memory';
@@ -36,6 +37,7 @@ export const initMemory = () => {
   buttonRepartir.className = 'inicio';
   buttonSalir.className = 'salir';
   divContent.className = 'grid';
+  divtarjetas.className = 'tarjetas';
 
   //limpiar el contenido
   divContent.innerHTML = '';
@@ -45,6 +47,7 @@ export const initMemory = () => {
   divContent.append(buttonRepartir);
   divContent.append(divTablero);
   divContent.append(buttonSalir);
+  divTablero.append(divtarjetas);
 
   // Evento para reiniciar el juego
   buttonRepartir.addEventListener('click', () => {

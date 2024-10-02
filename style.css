@@ -46,6 +46,7 @@
   display: block;
   width: 900px;
   margin: auto;
+  margin-top: var(--3jr-margin-xl);
 }
 
 .portada {

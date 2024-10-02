@@ -1,5 +1,5 @@
-import { logicaTER, reiniciarJuego } from './logicaJuego';
-import './tresEnRaya.css';
+import { logicaTER, reiniciarJuego } from './logicaJuegoTER';
+import '../../pages/stylesGames.css';
 
 export const initTresEnRaya = () => {
   //Seleccionar el contendor
@@ -7,18 +7,18 @@ export const initTresEnRaya = () => {
 
   //crear un titulo, boton y tablero
   const titulo = document.createElement('h1');
-  const buttonJugar = document.createElement('button');
+  const buttonNuevoJuego = document.createElement('button');
   const buttonSalir = document.createElement('button');
   const divTablero = document.createElement('div');
 
   //añadir texto
   titulo.textContent = 'Tres en Raya';
-  buttonJugar.textContent = 'Nuevo Juego';
+  buttonNuevoJuego.textContent = 'Nuevo Juego';
   buttonSalir.textContent = 'SALIR';
 
   //añadir clases
   divTablero.className = 'tablero';
-  buttonJugar.className = 'inicio';
+  buttonNuevoJuego.className = 'inicio';
   buttonSalir.className = 'salir';
   divContent.className = 'grid';
 
@@ -27,7 +27,7 @@ export const initTresEnRaya = () => {
 
   //añadir los elementos
   divContent.append(titulo);
-  divContent.append(buttonJugar);
+  divContent.append(buttonNuevoJuego);
   divContent.append(divTablero);
   divContent.append(buttonSalir);
 
@@ -43,7 +43,7 @@ export const initTresEnRaya = () => {
     divTablero.appendChild(celda); // Añadir cada celda al tablero
   }
   // Evento para reiniciar el juego
-  buttonJugar.addEventListener('click', () => {
+  buttonNuevoJuego.addEventListener('click', () => {
     reiniciarJuego(divTablero); // Reinicia el juego
   });
 

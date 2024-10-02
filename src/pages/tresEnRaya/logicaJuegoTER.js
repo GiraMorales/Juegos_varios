@@ -1,4 +1,4 @@
-import './tresEnRaya.css';
+import '../../pages/stylesGames.css';
 
 let ficha = 'X'; //ficha con la que empieza el jugador
 let tableroEstado = ['', '', '', '', '', '', '', '', '']; // nueve casillas del tablero

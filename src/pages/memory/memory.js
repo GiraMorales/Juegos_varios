@@ -50,13 +50,23 @@ export const initMemory = () => {
   divContent.append(divTablero);
   divContent.append(buttonSalir);
 
+  //barrajar tarjetas
+  function barajarTarjetas() {
+    var barajada;
+    barajada = totalFichas.sort(function () {
+      return 0.5 - Math.random();
+    });
+    return barajada;
+  }
+
   //creación de tarjetas en el tablero
   const reparteTarjetas = () => {
+    const tarjetasBarajadas = barajarTarjetas();
     //seleccionar el tablero
     const divtablero = document.querySelector('.tableroMMR');
     divtablero.innerHTML = ''; //para que lo limpie antes de repartir las tarjetas
 
-    totalFichas.forEach((element) => {
+    tarjetasBarajadas.forEach((element) => {
       //crear una tarjeta para cada ficha
       const divtarjeta = document.createElement('div');
       divtarjeta.className = 'tarjetas'; // Añadir la clase para el estilo
@@ -67,8 +77,6 @@ export const initMemory = () => {
       const backFace = document.createElement('div');
       backFace.className = 'back-face';
 
-      // divtarjeta.classList.add('tarjetasgiradas');
-      // divtarjeta.innerHTML = element; // Poner la ficha en la tarjeta
       // Añadir el símbolo a la parte trasera
       backFace.innerHTML = element;
 

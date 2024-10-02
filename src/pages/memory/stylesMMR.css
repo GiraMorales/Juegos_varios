@@ -39,6 +39,7 @@ tarjetasgiradas::selection {
 .tarjetasdescubiertas {
   transform: rotateY(-180deg);
 }
+
 .tableroMMR {
   display: flex;
   flex-wrap: wrap;

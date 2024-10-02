@@ -18,7 +18,7 @@ export const initTresEnRaya = () => {
   buttonSalir.textContent = 'SALIR';
 
   //añadir clases
-  divTablero.className = 'tablero';
+  divTablero.className = 'tableroTER';
   buttonNuevoJuego.className = 'inicio';
   buttonSalir.className = 'salir';
   divContent.className = 'grid';

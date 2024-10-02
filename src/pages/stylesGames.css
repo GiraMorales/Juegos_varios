@@ -2,7 +2,7 @@
   height: 600px;
   width: 600px;
   border-radius: 10px;
-  border-color: blue;
+  border-color: var(--3jr-letterbotton);
   margin: auto;
   margin-top: 250px;
   border-width: 1px;
@@ -12,8 +12,6 @@
 .grid {
   margin: auto;
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr; */
   height: 850px;
   width: 600px;
 }
@@ -25,7 +23,7 @@
   justify-content: center;
   color: var(--3jr-primary);
   width: 600px;
-  margin-top: var(--3jr-margin-xl);
+  margin-top: var(--3jr-margin-l);
 }
 
 .salir {
@@ -38,7 +36,7 @@
   margin-top: 130px;
   padding: 15px;
   width: 130px;
-  height: 80px;
+  height: 60px;
   font-size: var(--3jr-fontsize-m);
   align-items: center;
   justify-content: center;

@@ -1,0 +1,52 @@
+.tarjetas {
+  display: flex;
+  width: 106px;
+  height: 90px;
+  background-color: var(--3jr-terciary);
+  border-radius: var(--3jr-border-radius);
+  margin: 6px;
+  box-shadow: 2px 2px 15px black;
+  transition: 0.5s;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.front-face,
+.back-face {
+  display: flex;
+  position: absolute;
+  width: 106px;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  backface-visibility: hidden;
+  border-radius: var(--3jr-border-radius);
+  box-shadow: 2px 2px 15px black;
+  transform: rotateY(-180deg);
+}
+
+.tarjetas .back-face {
+  transform: rotateY(180deg);
+  background-color: var(--3jr-secondary);
+}
+
+tarjetasgiradas::selection {
+  background: transparent;
+}
+
+.tarjetasdescubiertas {
+  transform: rotateY(-180deg);
+}
+.tableroMMR {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 600px;
+  width: 600px;
+  border-radius: 10px;
+  border-color: var(--3jr-letterbotton);
+  margin: auto;
+  margin-top: 250px;
+}

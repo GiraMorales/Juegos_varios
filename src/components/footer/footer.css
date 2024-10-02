@@ -1,9 +1,9 @@
 footer {
   display: flex;
-  color: var(--3jr-secondary);
+  color: var(--3jr-primary);
   font-size: var(--3jr-fontsize-m);
   letter-spacing: var(--3jr-margin-xs);
   justify-content: center;
   width: 100%;
-  margin-top: var(--3jr-margin-xl);
+  margin-top: var(--3jr-margin-l);
 }

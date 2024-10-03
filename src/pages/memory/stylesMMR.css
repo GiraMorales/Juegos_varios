@@ -32,7 +32,7 @@
   background-color: var(--3jr-secondary);
 }
 
-tarjetasgiradas::selection {
+.tarjetasgiradas::selection {
   background: transparent;
 }
 

@@ -1,4 +1,5 @@
 import '../../pages/stylesgames.css';
+import { descubrir } from './logicaJuegoMMR';
 import './stylesMMR.css';
 
 const fichas = [
@@ -88,11 +89,8 @@ export const initMemory = () => {
     });
   };
 
-  const descubrir = (event) => {
-    event.currentTarget.classList.add('tarjetasdescubiertas');
-  };
-
   reparteTarjetas();
+  1;
 
   document.querySelectorAll('.tarjetas').forEach(function (element) {
     element.addEventListener('click', descubrir);

@@ -1,3 +1,15 @@
+.tableroMMR {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 600px;
+  width: 600px;
+  border-radius: 10px;
+  border-color: var(--3jr-letterbotton);
+  margin: auto;
+  margin-top: 250px;
+}
+
 .tarjetas {
   display: flex;
   width: 106px;
@@ -27,7 +39,7 @@
   transform: rotateY(-180deg);
 }
 
-.tarjetas .back-face {
+.back-face {
   transform: rotateY(180deg);
   background-color: var(--3jr-secondary);
 }
@@ -36,18 +48,62 @@
   background: transparent;
 }
 
-.tarjetasdescubiertas {
+.descubierta {
   transform: rotateY(-180deg);
 }
 
-.tableroMMR {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  height: 600px;
-  width: 600px;
-  border-radius: 10px;
-  border-color: var(--3jr-letterbotton);
-  margin: auto;
-  margin-top: 250px;
+@keyframes error {
+  0% {
+    transform: rotateY(-180deg) translateX(0);
+  }
+  10% {
+    transform: rotateY(-180deg) translateX(-2px);
+  }
+  20% {
+    transform: rotateY(-180deg) translateX(2px);
+  }
+  30% {
+    transform: rotateY(-180deg) translateX(-2px);
+  }
+  40% {
+    transform: rotateY(-180deg) translateX(2px);
+  }
+  50% {
+    transform: rotateY(-180deg) translateX(-2px);
+  }
+  60% {
+    transform: rotateY(-180deg) translateX(2px);
+  }
+  70% {
+    transform: rotateY(-180deg) translateX(-2px);
+  }
+  80% {
+    transform: rotateY(-180deg) translateX(2px);
+  }
+  100% {
+    transform: rotateY(-180deg) translateX(0);
+  }
+}
+@keyframes acertada {
+  from {
+    transform: scale(1) rotate(-180deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.acertada {
+  pointer-events: none;
+  animation: acertada 1.5s ease-in-out forwards;
+}
+
+.error {
+  animation: error 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }

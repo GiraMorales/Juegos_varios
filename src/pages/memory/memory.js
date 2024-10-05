@@ -1,26 +1,6 @@
 import '../../pages/stylesgames.css';
-import { descubrir } from './logicaJuegoMMR';
+import { barajarTarjetas, descubrir } from './logicaJuegoMMR';
 import './stylesMMR.css';
-
-const fichas = [
-  '👾',
-  '👽',
-  '👻',
-  '🤖',
-  '🐱‍👤',
-  '🕸',
-  '✨',
-  '🎯',
-  '🧩',
-  '🎹',
-  '🎪',
-  '🧶',
-  '🎈',
-  '🎪',
-  '🥽'
-];
-
-const totalFichas = fichas.concat(fichas);
 
 export const initMemory = () => {
   // Seleccionar el contenedor
@@ -46,19 +26,7 @@ export const initMemory = () => {
   divContent.innerHTML = '';
 
   //añadir los elementos
-  divContent.append(titulo);
-  divContent.append(buttonRepartir);
-  divContent.append(divTablero);
-  divContent.append(buttonSalir);
-
-  //barrajar tarjetas
-  function barajarTarjetas() {
-    var barajada;
-    barajada = totalFichas.sort(function () {
-      return 0.5 - Math.random();
-    });
-    return barajada;
-  }
+  divContent.append(titulo, buttonRepartir, divTablero, buttonSalir);
 
   //creación de tarjetas en el tablero
   const reparteTarjetas = () => {
@@ -87,18 +55,17 @@ export const initMemory = () => {
       // Añadir la tarjeta al tablero
       divtablero.appendChild(divtarjeta);
     });
+    // Añadir eventos de clic después de repartir las tarjetas
+    document.querySelectorAll('.tarjetas').forEach(function (element) {
+      element.addEventListener('click', descubrir);
+    });
   };
 
   reparteTarjetas();
-  1;
-
-  document.querySelectorAll('.tarjetas').forEach(function (element) {
-    element.addEventListener('click', descubrir);
-  });
 
   // Evento para reiniciar el juego
   buttonRepartir.addEventListener('click', () => {
-    reiniciarJuego(divTablero); // Reinicia el juego
+    reparteTarjetas();
   });
 
   //reiniciar la pantalla

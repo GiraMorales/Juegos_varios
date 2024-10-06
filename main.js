@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const divContent = document.createElement('div');
   const portada = document.createElement('img');
   portada.src =
-    'https://res.cloudinary.com/dvoady6dt/image/upload/v1725898643/assets/nkuxyn2yrixprzoxqfv2.png';
+    'https://res.cloudinary.com/dvoady6dt/image/upload/v1728226096/assets/an8qxq0wmzq8esejqx88.png';
   divContent.className = 'content';
   portada.className = 'portada';
 

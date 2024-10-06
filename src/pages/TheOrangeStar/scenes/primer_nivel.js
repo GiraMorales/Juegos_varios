@@ -151,6 +151,7 @@ export default class Primer_Nivel extends Phaser.Scene {
   }
 
   update() {
+    const { left, right, down, up } = this.cursors;
     // Movimiento del jugador
     if (this.cursors.left.isDown) {
       this.player.setVelocityX(-130);

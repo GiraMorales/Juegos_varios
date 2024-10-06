@@ -1,5 +1,5 @@
 import '../../pages/stylesGames.css';
-import '../../../style.css';
+// import '../../../style.css';
 import { config } from './init.js';
 
 export const initTheOrangeStar = () => {

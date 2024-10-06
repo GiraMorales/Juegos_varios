@@ -1,4 +1,4 @@
-import '../../pages/stylesgames.css';
+import '../../pages/stylesGames.css';
 import { barajarTarjetas, descubrir } from './logicaJuegoMMR';
 import './stylesMMR.css';
 

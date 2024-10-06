@@ -1,4 +1,6 @@
 import '../../pages/stylesGames.css';
+import { config } from './init.js';
+import '../../../style.css';
 
 export const initTheOrangeStar = () => {
   const divContent = document.querySelector('.content');
@@ -22,15 +24,24 @@ export const initTheOrangeStar = () => {
   //limpiar el contenido
   divContent.innerHTML = '';
 
-  //añadir los elementos
+  //añadir los elementos al Dom
   divContent.append(titulo);
   divContent.append(buttonJugar);
   divContent.append(divTablero);
   divContent.append(buttonSalir);
 
-  // Evento para reiniciar el juego
+  //variable para instanciar el juego
+  let game = null;
+
+  // Evento para iniciar el juego cuando se presiona el botón "JUGAR"
   buttonJugar.addEventListener('click', () => {
-    reiniciarJuego(divTablero); // Reinicia el juego
+    if (!game) {
+      // Asignar el contenedor dinámicamente para que Phaser se renderice ahí
+      config.parent = divTablero;
+      game = new Phaser.Game(config); // Iniciar el juego solo si aún no existe
+    } else {
+      game.scene.start('Primer_Nivel'); // Reiniciar la escena si ya existe el juego
+    }
   });
 
   //reiniciar la pantalla
@@ -38,3 +49,6 @@ export const initTheOrangeStar = () => {
     window.location.reload(); // Recarga la página
   });
 };
+
+// //instancia del juego
+// var game = new Phaser.Game(config);

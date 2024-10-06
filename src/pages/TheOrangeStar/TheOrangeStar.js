@@ -1,9 +1,10 @@
 import '../../pages/stylesGames.css';
-import { config } from './init.js';
 import '../../../style.css';
+import { config } from './init.js';
 
 export const initTheOrangeStar = () => {
   const divContent = document.querySelector('.content');
+
   // crear un titulo, botón y tablero
   const titulo = document.createElement('h1');
   const buttonJugar = document.createElement('button');
@@ -33,9 +34,14 @@ export const initTheOrangeStar = () => {
   //variable para instanciar el juego
   let game = null;
 
-  // Evento para iniciar el juego cuando se presiona el botón "JUGAR"
+  // Evento para iniciar el juego
   buttonJugar.addEventListener('click', () => {
     if (!game) {
+      // Limpiar cualquier canvas previo antes de crear uno nuevo
+      const previousCanvas = divTablero.querySelector('canvas');
+      if (previousCanvas) {
+        previousCanvas.remove();
+      }
       // Asignar el contenedor dinámicamente para que Phaser se renderice ahí
       config.parent = divTablero;
       game = new Phaser.Game(config); // Iniciar el juego solo si aún no existe
@@ -43,12 +49,12 @@ export const initTheOrangeStar = () => {
       game.scene.start('Primer_Nivel'); // Reiniciar la escena si ya existe el juego
     }
   });
-
+  // buttonJugar.addEventListener('click', () => {
+  //   // reiniciarJuego(divTablero);
+  //   game.scene.start(divTablero); // Reinicia el juego
+  // });
   //reiniciar la pantalla
   buttonSalir.addEventListener('click', () => {
     window.location.reload(); // Recarga la página
   });
 };
-
-// //instancia del juego
-// var game = new Phaser.Game(config);

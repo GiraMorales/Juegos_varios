@@ -1,8 +1,8 @@
 import './style.css';
 import { header } from './src/components/header/header';
 import { footer } from './src/components/footer/footer';
-import { initMemory } from './games/memoryGame'; // Importa el segundo juego
-import { initTheOrangeStar } from './games/theOrangeStar/TheOrangeStar'; // Importa The Orange Star
+// import { initMemory } from './games/memoryGame'; // Importa el segundo juego
+// import { initTheOrangeStar } from './games/theOrangeStar/TheOrangeStar'; // Importa The Orange Star
 
 document.addEventListener('DOMContentLoaded', () => {
   //crear el espacio donde irá el juego

@@ -12,8 +12,8 @@ import { RestartButton } from './gameObjects/restart_button.js';
 export const config = {
   title: 'The Orange Star',
   type: Phaser.AUTO, // automatico coge webgl o canvas
-  width: 600,
-  height: 600,
+  width: 660,
+  height: 660,
   parent: 'contenedor', // se asignará dinamicamente en TheOrangeStar.js
   pixelArt: true,
   scene: [
@@ -33,6 +33,3 @@ export const config = {
     }
   }
 };
-
-//instancia del juego
-// var game = new Phaser.Game(config);

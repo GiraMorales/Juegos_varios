@@ -1,5 +1,5 @@
 import { initMemory } from '../../pages/memory/memory';
-import { initTheOrangeStar } from '../../pages/The Orange Star/TheOrangeStar';
+import { initTheOrangeStar } from '../../pages/TheOrangeStar/TheOrangeStar';
 import { initTresEnRaya } from '../../pages/tresEnRaya/tresEnRaya';
 import './header.css';
 
@@ -28,12 +28,14 @@ export const header = (divContenedor) => {
     headerElement.classList.toggle('hidden');
   });
   buttonTOS.addEventListener('click', () => {
-    headerElement.classList.toggle('hidden');
+    headerElement.classList.toggle('hidden'); // Ocultar el header al hacer clic
   });
 
-  //poner los elementos creador en el html
+  //poner los elementos creador en el header
   headerElement.append(buttonTER);
   headerElement.append(buttonMMR);
   headerElement.append(buttonTOS);
+
+  //añadir el header al conetenedor principal
   divContenedor.append(headerElement);
 };

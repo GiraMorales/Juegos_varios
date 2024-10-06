@@ -7,11 +7,8 @@ export default class Bootloader extends Phaser.Scene {
   preload() {
     //cargar la primer cuando este cargado todo
     this.load.on('complete', () => {
-      this.scene.start(Primer_Nivel);
+      this.scene.start('MenuInicio');
     });
-
-    // console.log('Bootloader');
-    // this.load.setPath('./assets/');
 
     //imagenes
     this.load.image(
@@ -60,19 +57,15 @@ export default class Bootloader extends Phaser.Scene {
   }
 
   create() {
-    this.input.once(
-      'pointerdown',
-      () => {
-        const audioContext = Phaser.Sound.BaseSoundManager.context;
+    this.input.once('pointerdown', () => {
+      const audioContext = Phaser.Sound.BaseSoundManager.context;
 
-        // Verificar si el contexto está suspendido y reanudarlo
-        if (audioContext.state === 'suspended') {
-          audioContext.resume().then(() => {
-            console.log('AudioContext reanudado después del clic del usuario');
-          });
-        }
-      },
-      this
-    );
+      // Verificar si el contexto está suspendido y reanudarlo
+      if (audioContext.state === 'suspended') {
+        audioContext.resume().then(() => {
+          console.log('AudioContext reanudado después del clic del usuario');
+        });
+      }
+    });
   }
 }

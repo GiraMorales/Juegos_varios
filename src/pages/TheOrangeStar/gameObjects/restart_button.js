@@ -2,14 +2,6 @@ export class RestartButton {
   constructor(scene) {
     this.relatedScene = scene;
   }
-  // preload() {
-  //   this.relatedScene.load.spritesheet(
-  //     'botonju',
-  //     'https://res.cloudinary.com/dvoady6dt/image/upload/v1725475037/assets/botonJugar.png',
-  //     { frameWidth: 190, frameHeight: 49 }
-  //   );
-  // }
-
   preload() {
     if (this.load) {
       this.load.image(

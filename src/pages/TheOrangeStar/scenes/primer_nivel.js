@@ -9,8 +9,10 @@ export default class Primer_Nivel extends Phaser.Scene {
     // marcador de puntos
     this.score = 0;
     this.liveCounter = 3;
-    // this.score2 = 3;
-    // this.restarVidas = 1;
+  }
+  preload() {
+    // Cargar el archivo de audio con la clave "ambiente"
+    this.load.audio('ambiente', 'ruta/a/tu/audio.mp3');
   }
 
   create() {
@@ -37,12 +39,9 @@ export default class Primer_Nivel extends Phaser.Scene {
     this.add.image(0, 1, 'mapa1').setOrigin(0, 0);
 
     //jugador desde donde aparece en la pantalla al empezar, y el tamaño
-    // this.player = this.physics.add.sprite(40, 580, 'player').setScale(1.3);
     this.player = this.physics.add.sprite(40, 580, 'player').setScale(1.3);
-
     //rebote
     this.player.setBounce(0.3);
-
     //colision contra los limites del mundo
     this.player.setCollideWorldBounds();
 
@@ -52,12 +51,12 @@ export default class Primer_Nivel extends Phaser.Scene {
     //fisica para y colisionar y andar por la plataforma
     this.physics.add.collider(
       this.player,
-      this.platform,
-      this.platformImpact,
-      null,
-      this
+      this.platform
+      // this.platformImpact,
+      // null
     );
 
+    //animaciones del jugador
     //movimiento hacia la izquierda
     this.anims.create({
       key: 'left',
@@ -79,6 +78,22 @@ export default class Primer_Nivel extends Phaser.Scene {
       frames: this.anims.generateFrameNumbers('player', { start: 0, end: 4 }),
       frameRate: 10,
       repeat: -1
+    });
+
+    // contador de vidas y puntuación
+    this.liveCounterText = this.add.text(
+      300,
+      16,
+      'vidas: ' + this.liveCounter,
+      {
+        fontSize: '25px',
+        fill: '#000'
+      }
+    );
+
+    this.scoreText = this.add.text(300, 40, 'score: 0', {
+      fontSize: '25px',
+      fill: '#000'
     });
 
     //estrellas y sus posiciones
@@ -113,26 +128,7 @@ export default class Primer_Nivel extends Phaser.Scene {
       this
     );
 
-    //Game over
-    this.gameoverImage = this.add.image(340, 350, 'gameover').setScale(0.7, 1);
-    this.gameoverImage.visible = false;
-
-    //motor del cursor del teclado
-    this.cursors = this.input.keyboard.createCursorKeys();
-
-    //contador de vidas escala color
-    this.liveCounter = this.add.text(300, 16, 'vidas: 3', {
-      fontSize: '25px',
-      fill: '#000'
-    });
-
-    //puntos, posición escala y color
-    this.scoreText = this.add.text(300, 40, 'score: 0', {
-      fontSize: '25px',
-      fill: '#000'
-    });
-
-    //Música
+    //Música;
     var music = this.sound.add('ambiente');
     music.play();
 
@@ -141,12 +137,12 @@ export default class Primer_Nivel extends Phaser.Scene {
     this.perderSound = this.sound.add('perder');
     this.puntoSound = this.sound.add('punto');
 
-    // Usalo para que cuando no queden estrellas, te cambie de escena, por ejemplo
+    //Game over
+    this.gameoverImage = this.add.image(340, 350, 'gameover').setScale(0.7, 1);
+    this.gameoverImage.visible = false;
 
-    //   this.bricks.countActive() === 0 {
-    //   this.congratulations.visible = true;
-    //  this.scene.segundo_nivel();
-    // }
+    //motor del cursor del teclado
+    this.cursors = this.input.keyboard.createCursorKeys();
   }
 
   update() {
@@ -183,35 +179,17 @@ export default class Primer_Nivel extends Phaser.Scene {
     }
   }
 
-  // hitMalo(_player, malo) {
-  //   // physics.pause();
-  //   this.perderSound.play();
-
-  //   malo.disableBody(true, true);
-  //   this.restarVidas > 0;
-  //   this.score2 -= 1;
-  //   this.liveCounter.setText('vidas: ' + this.score2);
-  // }
-
   hitMalo(_player, malo) {
     malo.disableBody(true, true);
     this.perderSound.play();
+    this.liveCounter -= 1; // restar una vida
+    this.liveCounterText.setText('vidas: ' + this.liveCounter);
 
-    this.liveCounterValue -= 1; // Resta una vida
-    this.liveCounter.setText('vidas: ' + this.liveCounterValue);
-
-    if (this.liveCounterValue <= 0) {
+    if (this.liveCounter <= 0) {
       this.endGame(); // Termina el juego si las vidas llegan a 0
     }
   }
 
-  // endGame(completed = false) {
-  //   if (!completed) {
-  //     this.scene.start('gameover');
-  //   } else {
-  //     this.scene.start('congratulations');
-  //   }
-  // }
   endGame(completed = false) {
     if (!completed) {
       this.gameoverImage.visible = true;

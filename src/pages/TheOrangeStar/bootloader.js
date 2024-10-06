@@ -1,5 +1,3 @@
-import Primer_Nivel from './scenes/primer_nivel.js';
-
 export default class Bootloader extends Phaser.Scene {
   constructor() {
     super({ key: 'Bootloader' });
@@ -45,11 +43,11 @@ export default class Bootloader extends Phaser.Scene {
     );
 
     //sonidos
-    this.load.audio('punto', './audio/beepsBonksBoinks.mp3');
-    this.load.audio('perder', './audio/flame.mp3');
-    this.load.audio('caer', './audio/woosh.mp3');
-    this.load.audio('ambiente', './audio/OzzedGettingStarted.mp3');
-    this.load.audio('ganar', './audio/electroBeepAccentEC.mp3');
+    this.load.audio('punto', '../audio/beepsBonksBoinks.mp3');
+    this.load.audio('perder', '../audio/flame.mp3');
+    this.load.audio('caer', '../audio/woosh.mp3');
+    this.load.audio('ambiente', '../audio/OzzedGettingStarted.mp3');
+    this.load.audio('ganar', '../audio/electroBeepAccentEC.mp3');
 
     this.load.on('complete', () => {
       console.log('Load complete');

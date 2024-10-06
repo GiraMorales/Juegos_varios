@@ -45,14 +45,12 @@ export const initTheOrangeStar = () => {
       // Asignar el contenedor dinámicamente para que Phaser se renderice ahí
       config.parent = divTablero;
       game = new Phaser.Game(config); // Iniciar el juego solo si aún no existe
+      divTablero.focus(); // Asegurarse de que divTablero tenga el foco
     } else {
       game.scene.start('Primer_Nivel'); // Reiniciar la escena si ya existe el juego
     }
   });
-  // buttonJugar.addEventListener('click', () => {
-  //   // reiniciarJuego(divTablero);
-  //   game.scene.start(divTablero); // Reinicia el juego
-  // });
+
   //reiniciar la pantalla
   buttonSalir.addEventListener('click', () => {
     window.location.reload(); // Recarga la página

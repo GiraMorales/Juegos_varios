@@ -1,25 +1,31 @@
 // import { Scoreboard } from '../gameObjects/Scoreboard.js';
 import '../init.js';
-import '../bootloader.js/';
+import '../bootloader.js';
+
 export default class Primer_Nivel extends Phaser.Scene {
   constructor() {
     super({ key: 'Primer_Nivel' });
   }
+
   init() {
-    // marcador de puntos
+    // Marcador de puntos
     this.score = 0;
     this.liveCounter = 3;
   }
+
   preload() {
-    // Cargar el archivo de audio con la clave "ambiente"
-    this.load.audio('ambiente', 'ruta/a/tu/audio.mp3');
+    // Cargar todos los recursos, incluyendo los audios
+    this.load.audio('ambiente', '../audio/OzzedGettingStarted.mp3');
+    this.load.audio('caer', '../audio/woosh.mp3');
+    this.load.audio('perder', '../audio/flame.mp3');
+    this.load.audio('punto', '../audio/beepsBonksBoinks.mp3');
   }
 
   create() {
-    //el fondo
+    // El fondo
     this.add.image(0, 0, 'mapa').setOrigin(0, 0);
 
-    //plataformas
+    // Plataformas
     this.platform = this.physics.add.staticGroup();
     this.platform.create(80, 660, 'ground').setScale(4.5, 1).refreshBody();
     this.platform.create(285, 660, 'ground').setScale(2.5, 1).refreshBody();
@@ -35,29 +41,21 @@ export default class Primer_Nivel extends Phaser.Scene {
     this.platform.create(620, 105, 'ground').setScale(3, 1.5).refreshBody();
     this.platform.create(34, 150, 'ground').setScale(2, 2.5).refreshBody();
 
-    //tapa las plataformas
+    // Tapas las plataformas
     this.add.image(0, 1, 'mapa1').setOrigin(0, 0);
 
-    //jugador desde donde aparece en la pantalla al empezar, y el tamaño
+    // Jugador
     this.player = this.physics.add.sprite(40, 580, 'player').setScale(1.3);
-    //rebote
     this.player.setBounce(0.3);
-    //colision contra los limites del mundo
-    this.player.setCollideWorldBounds();
+    this.player.setCollideWorldBounds(true);
 
-    //para que se caiga por el hueco
+    // Para que se caiga por el hueco
     this.physics.world.setBoundsCollision(true, true, true, false);
 
-    //fisica para y colisionar y andar por la plataforma
-    this.physics.add.collider(
-      this.player,
-      this.platform
-      // this.platformImpact,
-      // null
-    );
+    // Física y colisión con la plataforma
+    this.physics.add.collider(this.player, this.platform);
 
-    //animaciones del jugador
-    //movimiento hacia la izquierda
+    // Animaciones del jugador
     this.anims.create({
       key: 'left',
       frames: this.anims.generateFrameNumbers('player', { start: 5, end: 9 }),
@@ -65,14 +63,12 @@ export default class Primer_Nivel extends Phaser.Scene {
       repeat: -1
     });
 
-    //animación vuelta en este caso mira al frente
     this.anims.create({
       key: 'turn',
       frames: [{ key: 'player', frame: 0 }],
       frameRate: 20
     });
 
-    //movimiento hacia la derecha
     this.anims.create({
       key: 'right',
       frames: this.anims.generateFrameNumbers('player', { start: 0, end: 4 }),
@@ -80,7 +76,7 @@ export default class Primer_Nivel extends Phaser.Scene {
       repeat: -1
     });
 
-    // contador de vidas y puntuación
+    // Contador de vidas y puntuación
     this.liveCounterText = this.add.text(
       300,
       16,
@@ -96,7 +92,7 @@ export default class Primer_Nivel extends Phaser.Scene {
       fill: '#000'
     });
 
-    //estrellas y sus posiciones
+    // Estrellas
     this.stars = this.physics.add.staticGroup();
     this.stars.create(410, 110, 'star');
     this.stars.create(210, 440, 'star');
@@ -104,13 +100,13 @@ export default class Primer_Nivel extends Phaser.Scene {
     this.stars.create(450, 440, 'star');
     this.stars.create(300, 610, 'star');
 
-    //posición del exprimidor y escala
+    // Enemigos
     this.malos = this.physics.add.staticGroup();
     this.malos.create(520, 237, 'malo').setScale(2);
     this.malos.create(315, 445, 'malo').setScale(1.5);
     this.malos.create(602, 605, 'malo').setScale(2);
 
-    //colisiones con las estrellas
+    // Colisiones
     this.physics.add.overlap(
       this.player,
       this.stars,
@@ -118,8 +114,6 @@ export default class Primer_Nivel extends Phaser.Scene {
       null,
       this
     );
-
-    //colisionar con los malos
     this.physics.add.collider(
       this.player,
       this.malos,
@@ -128,47 +122,55 @@ export default class Primer_Nivel extends Phaser.Scene {
       this
     );
 
-    //Música;
-    var music = this.sound.add('ambiente');
+    // Música
+    const music = this.sound.add('ambiente', { loop: true });
     music.play();
 
-    //sonidos
+    // Sonidos
     this.caerSound = this.sound.add('caer');
     this.perderSound = this.sound.add('perder');
     this.puntoSound = this.sound.add('punto');
 
-    //Game over
+    // Motor del cursor del teclado
+    this.cursors = this.input.keyboard.createCursorKeys();
+
+    // Listener para prevenir el desplazamiento de la pantalla
+    this.input.keyboard.on('keydown', (event) => {
+      if (
+        event.key === 'ArrowRight' ||
+        event.key === 'ArrowLeft' ||
+        event.key === 'ArrowUp'
+      ) {
+        event.preventDefault(); // Prevenir el comportamiento por defecto del navegador
+      }
+    });
+
+    // Game over
     this.gameoverImage = this.add.image(340, 350, 'gameover').setScale(0.7, 1);
     this.gameoverImage.visible = false;
-
-    //motor del cursor del teclado
-    this.cursors = this.input.keyboard.createCursorKeys();
   }
 
   update() {
-    //presionar la tecla de la derecha reproduce animación left
+    // Movimiento del jugador
     if (this.cursors.left.isDown) {
       this.player.setVelocityX(-130);
       this.player.anims.play('left', true);
-    }
-    //presionar la tecla de la izquierda reproduce la animación right
-    else if (this.cursors.right.isDown) {
+    } else if (this.cursors.right.isDown) {
       this.player.setVelocityX(130);
       this.player.anims.play('right', true);
-    }
-    //si no se toca nada se queda en la animación turn
-    else {
+    } else {
       this.player.setVelocityX(0);
       this.player.anims.play('turn');
     }
-    // pulsa para arriba para saltar simpre que esté en una plataforma
+
+    // Saltar
     if (this.cursors.up.isDown && this.player.body.touching.down) {
-      this.player.setVelocityY(-330);
+      this.player.setVelocityY(-330); // Velocidad del salto
     }
   }
 
   collectStar(_player, star) {
-    // para puntuar cada vez que coje una estrella
+    // Para puntuar cada vez que coje una estrella
     star.disableBody(true, true);
     this.score += 10;
     this.scoreText.setText('score: ' + this.score);
@@ -182,7 +184,7 @@ export default class Primer_Nivel extends Phaser.Scene {
   hitMalo(_player, malo) {
     malo.disableBody(true, true);
     this.perderSound.play();
-    this.liveCounter -= 1; // restar una vida
+    this.liveCounter -= 1; // Restar una vida
     this.liveCounterText.setText('vidas: ' + this.liveCounter);
 
     if (this.liveCounter <= 0) {

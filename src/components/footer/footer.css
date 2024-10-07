@@ -7,3 +7,21 @@ footer {
   width: 100%;
   margin-top: var(--3jr-margin-l);
 }
+
+@media screen and (min-width: 200px) {
+  footer {
+    font-size: var(--3jr-fontsize-s);
+  }
+}
+
+@media screen and (min-width: 368px) {
+  footer {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  footer {
+    margin-left: 11%;
+  }
+}

@@ -1,4 +1,5 @@
 import './style.css';
+import './mediastyle.css';
 import { header } from './src/components/header/header';
 import { footer } from './src/components/footer/footer';
 // import { initMemory } from './games/memoryGame'; // Importa el segundo juego

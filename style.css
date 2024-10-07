@@ -19,23 +19,23 @@
   --3jr-fontsize-xl: 90px;
 
   /*SPACINGS*/
-  --3jr-margin-sx: 5px;
+  --3jr-margin-sx: 7px;
   --3jr-margin-s: 10px;
   --3jr-margin-m: 20px;
   --3jr-margin-l: 30px;
   --3jr-margin-xl: 40px;
 
-  --3jr-padding-xs: 5px;
-  --3jr-padding-s: 10px;
+  --3jr-padding-xs: 4px;
+  --3jr-padding-s: 6px;
   --3jr-padding-m: 20px;
   --3jr-padding-l: 30px;
   --3jr-padding-xl: 40px;
 
-  --3jr-gap-xs: 5px;
-  --3jr-gap-s: 10px;
-  --3jr-gap-m: 20px;
-  --3jr-gap-l: 30px;
-  --3jr-gap-xl: 40px;
+  --3jr-gap-xs: 1px;
+  --3jr-gap-s: 2px;
+  --3jr-gap-m: 3px;
+  --3jr-gap-l: 4px;
+  --3jr-gap-xl: 5px;
 }
 
 * {

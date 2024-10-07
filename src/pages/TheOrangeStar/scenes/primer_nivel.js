@@ -151,6 +151,8 @@ export default class Primer_Nivel extends Phaser.Scene {
   }
 
   update() {
+    config.parent = divTablero;
+    divTablero.focus();
     const { left, right, down, up } = this.cursors;
     // Movimiento del jugador
     if (this.cursors.left.isDown) {
@@ -163,7 +165,6 @@ export default class Primer_Nivel extends Phaser.Scene {
       this.player.setVelocityX(0);
       this.player.anims.play('turn');
     }
-
     // Saltar
     if (this.cursors.up.isDown && this.player.body.touching.down) {
       this.player.setVelocityY(-330); // Velocidad del salto

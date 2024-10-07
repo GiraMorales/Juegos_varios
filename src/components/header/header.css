@@ -30,6 +30,9 @@ header button {
     flex-direction: column;
     margin-left: 5%;
   }
+  header button {
+    font-size: var(--3jr-fontsize-m);
+  }
 }
 
 @media screen and (min-width: 434px) {

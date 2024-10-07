@@ -8,11 +8,11 @@ header {
   padding: var(--3jr-padding-sx);
   justify-content: space-around;
   align-items: center;
-  /* gap: var(--3jr-gap-xs); */
-  flex-wrap: nowrap;
+  gap: var(--3jr-gap-xs);
+  flex-wrap: wrap;
   height: 20%;
-  /* width: 100%; */
-  /* margin-bottom: auto; */
+  width: 100%;
+  margin-bottom: auto;
 }
 
 header button {
@@ -20,11 +20,15 @@ header button {
   border-radius: 10px;
   font-size: var(--3jr-fontsize-s);
   background-color: var(--3jr-botton);
-  margin: var(--3jr-margin-xs);
+  margin: var(--3jr-margin-s);
   color: var(--3jr-letterbotton);
 }
 
 @media screen and (min-width: 200px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 434px) {

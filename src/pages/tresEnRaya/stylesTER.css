@@ -20,3 +20,16 @@
   font-size: var(--3jr-fontsize-xl);
   cursor: pointer;
 }
+
+@media screen and (max-width: 800px) {
+  .tableroTER {
+    height: 500px;
+    width: 500px;
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+}
+@media screen and (max-width: 368px) {
+}

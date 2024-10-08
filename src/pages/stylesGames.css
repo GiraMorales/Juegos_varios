@@ -1,12 +1,10 @@
 .tablero {
   height: 660px;
   width: 660px;
-  border-radius: 10px;
+
   border-color: var(--3jr-letterbotton);
   margin: auto;
   margin-top: 250px;
-  border-width: 1px;
-  border: solid;
 }
 
 .grid {
@@ -45,4 +43,36 @@
   background-color: var(--3jr-botton);
   color: var(--3jr-letterbotton);
   border-radius: var(--3jr-border-radius);
+}
+
+@media screen and (max-width: 800px) {
+  .inicio {
+    margin-left: 5%;
+  }
+  .grid h1 {
+    font-size: var(--3jr-fontsize-m);
+    width: 100%;
+  }
+  .salir {
+    margin-left: 70%;
+  }
+
+  .grid {
+    margin-bottom: 10%;
+    height: 650px;
+    width: 360px;
+    align-content: center;
+  }
+  .grid button {
+    display: flex;
+    margin-top: 100px;
+    width: 120px;
+    height: 50px;
+    font-size: var(--3jr-fontsize-s);
+  }
+}
+
+@media screen and (max-width: 568px) {
+}
+@media screen and (max-width: 368px) {
 }

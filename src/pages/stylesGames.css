@@ -99,4 +99,11 @@
   }
 }
 @media screen and (max-width: 368px) {
+  .inicio {
+    margin-left: 5%;
+  }
+
+  .salir {
+    margin-left: 60%;
+  }
 }

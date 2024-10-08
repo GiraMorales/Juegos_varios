@@ -112,8 +112,11 @@
   .tableroMMR {
     height: 550px;
     width: 550px;
+    margin-top: 150px;
   }
-  .tarjetas {
+  .tarjetas,
+  .front-face,
+  .back-face {
     width: 95px;
     height: 80px;
   }
@@ -124,7 +127,9 @@
     height: 450px;
     width: 400px;
   }
-  .tarjetas {
+  .tarjetas,
+  .front-face,
+  .back-face {
     width: 50px;
     height: 50px;
   }
@@ -133,8 +138,11 @@
   .tableroMMR {
     height: 350px;
     width: 300px;
+    margin-top: 75px;
   }
-  .tarjetas {
+  .tarjetas,
+  .front-face,
+  .back-face {
     width: 45px;
     height: 45px;
   }

@@ -60,12 +60,12 @@
   .grid {
     margin-bottom: 10%;
     height: 650px;
-    width: 360px;
+    width: 660px;
     align-content: center;
   }
   .grid button {
     display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
     width: 120px;
     height: 50px;
     font-size: var(--3jr-fontsize-s);
@@ -73,6 +73,30 @@
 }
 
 @media screen and (max-width: 568px) {
+  .inicio {
+    margin-left: 10%;
+  }
+  .grid h1 {
+    font-size: var(--3jr-fontsize-m);
+    width: 100%;
+    margin-left: 7%;
+  }
+  .salir {
+    margin-left: 70%;
+  }
+
+  .grid {
+    margin-bottom: 10%;
+    height: 650px;
+    width: 360px;
+    align-content: center;
+  }
+  .grid button {
+    display: flex;
+    margin-top: 80px;
+    width: 100px;
+    height: 50px;
+  }
 }
 @media screen and (max-width: 368px) {
 }

@@ -30,6 +30,16 @@
 }
 
 @media screen and (max-width: 568px) {
+  .tableroTER {
+    height: 500px;
+    width: 568px;
+    margin-top: 200px;
+  }
 }
 @media screen and (max-width: 368px) {
+  .tableroTER {
+    height: 500px;
+    width: 368px;
+    margin-top: 200px;
+  }
 }

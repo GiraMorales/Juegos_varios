@@ -1,79 +1,86 @@
-@media screen and (min-width: 200px) {
-  body {
-    min-height: 50svh;
-    width: 45svh;
-  }
-
+@media screen and (max-width: 1920px) {
   .content {
-    width: 420px;
-    margin: auto;
     display: flex;
+    width: 850px;
     justify-content: center;
   }
+  .portada {
+    width: 150%;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .portada {
+    width: 130%;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .portada {
+    width: 120%;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .portada {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 930px) {
   .portada {
     width: 90%;
-    margin: 30%;
-    margin-left: 45%;
   }
 }
 
-@media screen and (min-width: 368px) {
-  .content {
-    width: 368px;
-  }
-}
-@media screen and (min-width: 434px) {
-  .content {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 568px) {
-  .content {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: auto;
-  }
+@media screen and (max-width: 860px) {
   .portada {
-    width: 70%;
-    margin-left: 5%;
+    width: 75%;
+    margin-left: -10%;
   }
 }
-
-@media screen and (min-width: 800px) {
-  .content {
-    width: 800px;
-    margin-left: 11%;
-    margin: auto;
-  }
+@media screen and (max-width: 700px) {
   .portada {
-    width: 100%;
+    width: 65%;
+    margin-left: -25%;
   }
 }
-
-@media screen and (min-width: 992px) {
-  .content {
-    width: 992px;
-    margin: auto;
-    margin-left: 10%;
-  }
-}
-
-@media screen and (min-width: 1150px) {
-  .content {
-    width: 900px;
-    margin: auto;
-    margin-left: 15%;
-  }
-}
-
-@media screen and (min-width: 1450px) {
-  .content {
-    width: 900px;
-    margin-left: 17%;
-  }
+@media screen and (max-width: 600px) {
   .portada {
-    width: 110%;
+    width: 60%;
+    margin-left: -35%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .portada {
+    width: 50%;
+    margin-left: -45%;
+  }
+}
+
+@media screen and (max-width: 432px) {
+  .portada {
+    width: 40%;
+    margin-left: -55%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .portada {
+    width: 30%;
+    margin-left: -60%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .portada {
+    width: 25%;
+    margin-left: -68%;
+  }
+}
+@media screen and (max-width: 250px) {
+  .portada {
+    width: 25%;
+    margin-left: -70%;
   }
 }

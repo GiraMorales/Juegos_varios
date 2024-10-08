@@ -15,8 +15,10 @@
   --3jr-fontsize-xs: 10px;
   --3jr-fontsize-s: 20px;
   --3jr-fontsize-m: 30px;
-  --3jr-fontsize-l: 70px;
-  --3jr-fontsize-xl: 90px;
+  --3jr-fontsize-l: 40px;
+  --3jr-fontsize-xl: 50px;
+  --3jr-fontsize-xxl: 60px;
+  --3jr-fontsize-xxxl: 70px;
 
   /*SPACINGS*/
   --3jr-margin-sx: 7px;
@@ -44,10 +46,13 @@
   font-family: 'Jersey 15', sans-serif;
 }
 .content {
-  display: block;
-  width: 900px;
+  display: flex;
+  width: 800px;
   margin: auto;
-  margin-top: var(--3jr-margin-xl);
+  margin-top: -2%;
+  margin-bottom: -2%;
+  background-size: cover;
+  justify-content: center;
 }
 
 .portada {

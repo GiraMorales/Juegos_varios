@@ -87,19 +87,19 @@ header button {
   header button {
     padding: var(--3jr-padding-xs);
     font-size: var(--3jr-fontsize-s);
-    width: 50%;
+    width: 65%;
   }
 }
 @media screen and (max-width: 300px) {
   header button {
     font-size: var(--3jr-fontsize-xs);
-    width: 40%;
+    width: 55%;
   }
 }
 
 @media screen and (max-width: 250px) {
   header button {
     font-size: var(--3jr-fontsize-xs);
-    width: 40%;
+    width: 50%;
   }
 }

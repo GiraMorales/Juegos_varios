@@ -5,21 +5,32 @@ footer {
   letter-spacing: var(--3jr-margin-xs);
   justify-content: center;
   width: 100%;
-  margin-top: var(--3jr-margin-xs);
+  margin-top: 10%;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    margin-top: 25%;
+    font-size: var(--3jr-fontsize-s);
+  }
 }
 
 @media screen and (max-width: 500px) {
   footer {
+    margin-top: var(--3jr-margin-xl);
     font-size: var(--3jr-fontsize-s);
   }
 }
+
 @media screen and (max-width: 432px) {
   footer {
+    margin-top: var(--3jr-margin-l);
     font-size: var(--3jr-fontsize-s);
   }
 }
 @media screen and (max-width: 350px) {
   footer {
+    margin-top: var(--3jr-margin-xl);
     font-size: var(--3jr-fontsize-xs);
   }
 }

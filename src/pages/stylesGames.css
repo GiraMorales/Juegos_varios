@@ -1,7 +1,6 @@
 .tablero {
   height: 660px;
   width: 660px;
-
   border-color: var(--3jr-letterbotton);
   margin: auto;
   margin-top: 250px;
@@ -10,24 +9,25 @@
 .grid {
   margin: auto;
   display: grid;
-  height: 950px;
+  height: 800px;
   width: 660px;
-  justify-content: space-around;
-  align-content: space-between;
+  align-content: space-evenly;
+  justify-items: stretch;
 }
 
 .grid h1 {
   font-size: var(--3jr-fontsize-l);
   display: flex;
-  position: absolute;
+  position: relative;
   justify-content: center;
   color: var(--3jr-primary);
-  width: 600px;
+  width: 660px;
   margin-top: var(--3jr-margin-l);
+  margin-left: auto;
 }
 
 .salir {
-  margin-left: 450px;
+  margin-left: 455px;
 }
 
 .grid button {
@@ -47,63 +47,86 @@
 
 @media screen and (max-width: 800px) {
   .inicio {
-    margin-left: 5%;
-  }
-  .grid h1 {
-    font-size: var(--3jr-fontsize-m);
-    width: 100%;
+    margin-left: 85px;
   }
   .salir {
-    margin-left: 70%;
+    margin-left: 460px;
+  }
+
+  .grid h1 {
+    margin-top: var(--3jr-margin-l);
+
+    font-size: var(--3jr-fontsize-m);
+    width: 100%;
+    justify-content: space-around;
   }
 
   .grid {
-    margin-bottom: 10%;
-    height: 650px;
+    height: 600px;
     width: 660px;
-    align-content: center;
+    align-content: baseline;
   }
+
   .grid button {
     display: flex;
-    margin-top: 50px;
+    margin-top: 80px;
     width: 120px;
     height: 50px;
     font-size: var(--3jr-fontsize-s);
   }
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 700px) {
   .inicio {
-    margin-left: 10%;
-  }
-  .grid h1 {
-    font-size: var(--3jr-fontsize-m);
-    width: 100%;
-    margin-left: 7%;
+    margin-left: 100px;
   }
   .salir {
-    margin-left: 70%;
+    margin-left: 390px;
   }
 
   .grid {
-    margin-bottom: 10%;
-    height: 650px;
-    width: 360px;
-    align-content: center;
-  }
-  .grid button {
-    display: flex;
-    margin-top: 80px;
-    width: 100px;
-    height: 50px;
-  }
-}
-@media screen and (max-width: 368px) {
-  .inicio {
-    margin-left: 5%;
+    height: 550px;
+    width: 600px;
   }
 
+  .grid button {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid button {
+    margin-top: 95px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .inicio {
+    margin-left: 50px;
+  }
   .salir {
-    margin-left: 60%;
+    margin-left: 260px;
+  }
+
+  .grid {
+    height: 400px;
+    width: 500px;
+  }
+
+  .grid button {
+    margin-top: 85px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .inicio {
+    margin-left: 40px;
+  }
+  .salir {
+    margin-left: 240px;
+  }
+
+  .grid button {
+    margin-top: 80px;
   }
 }

@@ -10,27 +10,28 @@ footer {
 
 @media screen and (max-width: 800px) {
   footer {
-    margin-top: 25%;
+    margin-top: 45%;
     font-size: var(--3jr-fontsize-s);
   }
 }
 
 @media screen and (max-width: 500px) {
   footer {
-    margin-top: var(--3jr-margin-xl);
     font-size: var(--3jr-fontsize-s);
   }
 }
 
 @media screen and (max-width: 432px) {
   footer {
-    margin-top: var(--3jr-margin-l);
+    margin-top: 70%;
     font-size: var(--3jr-fontsize-s);
   }
 }
 @media screen and (max-width: 350px) {
   footer {
-    margin-top: var(--3jr-margin-xl);
+    margin: auto;
+
+    margin-top: 100%;
     font-size: var(--3jr-fontsize-xs);
   }
 }

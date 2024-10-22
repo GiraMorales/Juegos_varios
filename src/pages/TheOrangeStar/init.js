@@ -3,7 +3,6 @@ import Bootloader from './bootloader.js';
 //Importar la primera escena
 import MenuInicio from './scenes/menuinicio.js';
 import Primer_Nivel from './scenes/primer_nivel.js';
-import Segundo_Nivel from './scenes/segundo_nivel.js';
 import GameOver from './scenes/gameover.js';
 import { Scoreboard } from './gameObjects/Scoreboard.js';
 import { RestartButton } from './gameObjects/restart_button.js';
@@ -20,7 +19,6 @@ export const config = {
     Bootloader,
     MenuInicio,
     Primer_Nivel,
-    Segundo_Nivel,
     Scoreboard,
     RestartButton,
     GameOver

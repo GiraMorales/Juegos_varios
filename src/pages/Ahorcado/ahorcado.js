@@ -24,6 +24,6 @@ export const initAhorcado = () => {
   //limpiar el contenido
   divContent.innerHTML = '';
 
-  //añadir los elementos
+  //añadir los elementos.
   divContent.append(titulo, buttonJugar, divTablero, buttonSalir);
 };

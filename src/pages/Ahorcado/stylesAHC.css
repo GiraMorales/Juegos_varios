@@ -1,0 +1,11 @@
+.tableroAHC {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 600px;
+  width: 600px;
+  border-radius: 10px;
+  border-color: var(--3jr-letterbotton);
+  margin: auto;
+  margin-top: 200px;
+}

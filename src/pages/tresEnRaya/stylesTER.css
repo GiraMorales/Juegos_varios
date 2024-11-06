@@ -18,7 +18,24 @@
   justify-content: center;
   align-items: center;
   font-size: var(--3jr-fontsize-xl);
-  cursor: pointer;
+  cursor: point;
+}
+
+.grid {
+  height: 900px;
+  margin-left: 15%;
+}
+@media screen and (max-width: 900px) {
+  .grid {
+    height: 800px;
+    margin-left: 10px;
+  }
+  .salir {
+    margin-left: 500px;
+  }
+  .grid {
+    height: 900px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -27,20 +44,65 @@
     width: 500px;
     margin-top: 120px;
   }
+  .inicio {
+    margin-left: 20%;
+  }
+  .salir {
+    margin-left: 72%;
+  }
+  .grid {
+    height: 750px;
+  }
 }
 @media screen and (max-width: 700px) {
   .tableroTER {
     height: 400px;
     width: 410px;
   }
-}
 
+  .inicio {
+    margin-left: 120px;
+  }
+  .salir {
+    margin-left: 410px;
+  }
+  .grid {
+    height: 650px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .inicio {
+    margin-left: 100px;
+  }
+  .salir {
+    margin-left: 390px;
+  }
+  .grid h1 {
+    margin-left: 60px;
+  }
+  .grid {
+    height: 600px;
+  }
+}
 @media screen and (max-width: 500px) {
   .tableroTER {
     height: 300px;
-    width: 320px;
+    width: 330px;
     margin-top: 110px;
     margin-left: 50px;
+  }
+  .grid h1 {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .inicio {
+    margin-left: 40px;
+  }
+  .salir {
+    margin-left: 260px;
+  }
+  .grid {
+    height: 500px;
   }
 }
 
@@ -49,5 +111,44 @@
     height: 250px;
     width: 260px;
     margin-top: 100px;
+  }
+  .grid h1 {
+    width: 100%;
+    margin-left: -10px;
+  }
+  .inicio {
+    margin-left: 50px;
+  }
+  .salir {
+    margin-left: 220px;
+  }
+  .grid button {
+    width: 100px;
+    height: 40px;
+    font-size: var(--3jr-fontsize-xs);
+  }
+
+  .grid {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .tableroTER {
+    height: 200px;
+    width: 210px;
+    margin-top: 100px;
+  }
+
+  .salir {
+    margin-left: 180px;
+  }
+  .grid button {
+    width: 90px;
+    height: 40px;
+    font-size: var(--3jr-fontsize-xs);
+  }
+  .grid {
+    height: 300px;
   }
 }

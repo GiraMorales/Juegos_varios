@@ -21,7 +21,7 @@
   position: relative;
   justify-content: center;
   color: var(--3jr-primary);
-  width: 660px;
+  width: 100%;
   margin-top: var(--3jr-margin-l);
   margin-left: auto;
 }

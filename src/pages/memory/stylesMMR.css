@@ -192,9 +192,9 @@
 }
 @media screen and (max-width: 368px) {
   .tableroMMR {
-    height: 400px;
+    height: 450px;
     width: 350px;
-    margin-top: 70px;
+    margin-top: 75px;
     margin-left: 12%;
   }
   .tarjetas,
@@ -215,7 +215,7 @@
     margin-left: 50px;
   }
   .salir {
-    margin-left: 250px;
+    margin-left: 240px;
   }
   .grid button {
     width: 100px;
@@ -241,5 +241,10 @@
   }
   .salir {
     margin-left: 180px;
+  }
+  .grid button {
+    width: 100px;
+    height: 40px;
+    font-size: var(--3jr-fontsize-s);
   }
 }

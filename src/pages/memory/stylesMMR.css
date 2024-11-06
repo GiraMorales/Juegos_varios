@@ -108,10 +108,34 @@
   animation: error 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1950px) {
+  .tableroMMR {
+    height: 500px;
+    width: 800px;
+    margin-top: 120px;
+  }
+  .tarjetas,
+  .front-face,
+  .back-face {
+    width: 110px;
+    height: 90px;
+    margin-left: 2%;
+  }
+  .grid {
+    height: 800px;
+  }
+  .grid h1 {
+    width: 800px;
+  }
+  .salir {
+    margin-left: 600px;
+  }
+}
+
+@media screen and (max-width: 900px) {
   .tableroMMR {
     height: 550px;
-    width: 550px;
+    width: 600px;
     margin-top: 150px;
   }
   .tarjetas,
@@ -120,31 +144,51 @@
     width: 95px;
     height: 80px;
   }
+  .grid {
+    height: 800px;
+  }
 }
 
 @media screen and (max-width: 568px) {
   .tableroMMR {
-    height: 450px;
-    width: 400px;
+    height: 400px;
+    width: 450px;
   }
   .tarjetas,
   .front-face,
   .back-face {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+  }
+  .grid h1 {
+    width: 500px;
+  }
+  .salir {
+    margin-left: 330px;
   }
 }
 @media screen and (max-width: 368px) {
   .tableroMMR {
-    height: 350px;
-    width: 300px;
+    height: 450px;
+    width: 350px;
     margin-top: 75px;
+    margin-left: 12%;
   }
   .tarjetas,
   .front-face,
   .back-face {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
+  }
+  .grid {
+    height: 500px;
+    width: 350px;
+  }
+  .grid h1 {
+    width: 300px;
+  }
+  .salir {
+    margin-left: 240px;
   }
 }
 @media screen and (max-width: 268px) {
@@ -158,5 +202,11 @@
   .back-face {
     width: 35px;
     height: 35px;
+  }
+  .grid h1 {
+    width: 300px;
+  }
+  .salir {
+    margin-left: 200px;
   }
 }

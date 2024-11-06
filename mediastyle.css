@@ -5,19 +5,19 @@
     justify-content: center;
   }
   .portada {
-    width: 150%;
+    width: 130%;
   }
 }
 
 @media screen and (max-width: 1450px) {
   .portada {
-    width: 130%;
+    width: 110%;
   }
 }
 
 @media screen and (max-width: 1260px) {
   .portada {
-    width: 120%;
+    width: 110%;
   }
 }
 
@@ -39,12 +39,13 @@
     width: 75%;
     margin-top: 10%;
     margin-bottom: 10%;
+    margin-left: -18%;
   }
 }
 @media screen and (max-width: 700px) {
   .portada {
     width: 65%;
-    margin-left: -18%;
+    margin-left: -28%;
     margin-top: 15%;
     margin-bottom: 15%;
   }

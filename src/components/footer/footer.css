@@ -15,26 +15,15 @@ footer {
   }
 }
 
-@media screen and (max-width: 500px) {
-  footer {
-    font-size: var(--3jr-fontsize-s);
-    width: 500px;
-  }
-}
-
 @media screen and (max-width: 432px) {
   footer {
     margin-top: 50%;
-    font-size: var(--3jr-fontsize-s);
-    width: 400px;
   }
 }
 @media screen and (max-width: 350px) {
   footer {
     margin: auto;
-
     margin-top: 40%;
     font-size: var(--3jr-fontsize-xs);
-    width: 300px;
   }
 }

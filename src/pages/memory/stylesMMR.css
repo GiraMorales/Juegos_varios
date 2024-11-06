@@ -147,6 +147,26 @@
   .grid {
     height: 800px;
   }
+
+  .grid h1 {
+    width: 800px;
+  }
+}
+
+.inicio {
+  margin-left: 110px;
+}
+.salir {
+  margin-left: 460px;
+}
+
+@media screen and (max-width: 700px) {
+  .salir {
+    margin-left: 400px;
+  }
+  .grid h1 {
+    width: 650px;
+  }
 }
 
 @media screen and (max-width: 568px) {
@@ -166,12 +186,15 @@
   .salir {
     margin-left: 330px;
   }
+  .inicio {
+    margin-left: 50px;
+  }
 }
 @media screen and (max-width: 368px) {
   .tableroMMR {
-    height: 450px;
+    height: 400px;
     width: 350px;
-    margin-top: 75px;
+    margin-top: 70px;
     margin-left: 12%;
   }
   .tarjetas,
@@ -187,14 +210,23 @@
   .grid h1 {
     width: 300px;
   }
+
+  .inicio {
+    margin-left: 50px;
+  }
   .salir {
-    margin-left: 240px;
+    margin-left: 250px;
+  }
+  .grid button {
+    width: 100px;
+    height: 40px;
+    font-size: var(--3jr-fontsize-s);
   }
 }
 @media screen and (max-width: 268px) {
   .tableroMMR {
     height: 350px;
-    width: 300px;
+    width: 250px;
     margin-top: 75px;
   }
   .tarjetas,
@@ -204,9 +236,10 @@
     height: 35px;
   }
   .grid h1 {
-    width: 300px;
+    width: 200px;
+    margin-left: 20%;
   }
   .salir {
-    margin-left: 200px;
+    margin-left: 180px;
   }
 }

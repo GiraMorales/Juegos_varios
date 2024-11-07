@@ -5,9 +5,14 @@ footer {
   letter-spacing: var(--3jr-margin-xs);
   justify-content: center;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 1%;
 }
-
+@media screen and (max-width: 1000px) {
+  footer {
+    margin-top: 5%;
+    font-size: var(--3jr-fontsize-s);
+  }
+}
 @media screen and (max-width: 800px) {
   footer {
     margin-top: 10%;
@@ -15,15 +20,10 @@ footer {
   }
 }
 
-@media screen and (max-width: 432px) {
-  footer {
-    margin-top: 50%;
-  }
-}
 @media screen and (max-width: 350px) {
   footer {
     margin: auto;
-    margin-top: 40%;
+    margin-top: 30%;
     font-size: var(--3jr-fontsize-xs);
   }
 }

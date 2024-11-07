@@ -1,19 +1,18 @@
 .tablero {
-  height: 600px;
-  width: 600px;
+  height: 700px;
+  width: 700px;
   border-color: var(--3jr-letterbotton);
-  margin: auto;
-  margin-top: 100px;
+  margin-top: 1%;
 }
 
 .grid {
   margin: auto;
   display: grid;
-  height: 900px;
-  width: 660px;
+  height: 800px;
+  width: 700px;
   align-content: space-evenly;
   justify-items: stretch;
-  margin-top: -4%;
+  justify-content: center;
 }
 
 .grid h1 {
@@ -24,17 +23,18 @@
   color: var(--3jr-primary);
   width: 100%;
   margin-top: var(--3jr-margin-xs);
-  margin-left: center;
 }
 
 .salir {
   margin-left: 455px;
 }
-
+.inicio {
+  margin-left: 46px;
+}
 .grid button {
   display: flex;
   position: absolute;
-  margin-top: 130px;
+  margin-top: 100px;
   padding: 15px;
   width: 200px;
   height: 60px;
@@ -46,73 +46,24 @@
   border-radius: var(--3jr-border-radius);
 }
 
-@media screen and (max-width: 1950px) {
-  .grid {
-    height: 800px;
-  }
-  .grid h1 {
-    width: 800px;
-  }
-  .salir {
-    margin-left: 600px;
-  }
-}
-@media screen and (max-width: 1950px) {
-  .grid {
-    height: 1000px;
-  }
-  .grid h1 {
-    width: 800px;
-  }
-  .salir {
-    margin-left: 600px;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .grid {
-    height: 800px;
-    margin-left: 10px;
-  }
-
-  .grid h1 {
-    width: 800px;
-  }
-  .inicio {
-    margin-left: 110px;
-  }
-  .salir {
-    margin-left: 460px;
-  }
-}
 @media screen and (max-width: 800px) {
-  /* .inicio {
-    margin-left: 85px;
-  }
-  .salir {
-    margin-left: 460px;
-  } */
   .inicio {
-    margin-left: 20%;
+    margin-left: 75px;
   }
   .salir {
-    margin-left: 72%;
+    margin-left: 465px;
   }
-
   .grid h1 {
     margin-top: var(--3jr-margin-l);
-
     font-size: var(--3jr-fontsize-m);
     width: 100%;
     justify-content: space-around;
   }
-
   .grid {
     height: 750px;
     width: 660px;
     align-content: baseline;
   }
-
   .grid button {
     display: flex;
     margin-top: 80px;
@@ -124,10 +75,10 @@
 
 @media screen and (max-width: 700px) {
   .inicio {
-    margin-left: 120px;
+    margin-left: 90px;
   }
   .salir {
-    margin-left: 400px;
+    margin-left: 390px;
   }
 
   .grid {
@@ -148,64 +99,48 @@
     margin-top: 95px;
   }
   .inicio {
-    margin-left: 100px;
+    margin-left: 43px;
   }
   .salir {
-    margin-left: 390px;
+    margin-left: 340px;
   }
   .grid h1 {
-    margin-left: 60px;
+    width: 400px;
   }
   .grid {
     height: 600px;
-  }
-}
-@media screen and (max-width: 568px) {
-  .grid h1 {
     width: 500px;
-  }
-  .salir {
-    margin-left: 330px;
-  }
-  .inicio {
-    margin-left: 50px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .inicio {
-    margin-left: 50px;
+    margin-left: 70px;
   }
   .salir {
-    margin-left: 260px;
+    margin-left: 290px;
   }
 
   .grid {
     height: 500px;
-    width: 400px;
+    width: 450px;
+    justify-content: start;
   }
 
   .grid button {
     margin-top: 85px;
   }
-
-  .grid h1 {
-    justify-content: center;
-    width: 100%;
-    margin-left: 10px;
+  .inicio {
+    margin-left: 50px;
+  }
+  .salir {
+    margin-left: 270px;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .inicio {
-    margin-left: 40px;
-  }
   .salir {
-    margin-left: 240px;
-  }
-  .grid h1 {
-    width: 100%;
-    margin-left: -10px;
+    margin-left: 215px;
   }
   .grid button {
     margin-top: 80px;
@@ -214,28 +149,27 @@
     font-size: var(--3jr-fontsize-xs);
   }
   .grid {
-    height: 400px;
+    width: 350px;
   }
 }
-@media screen and (max-width: 368px) {
+@media screen and (max-width: 350px) {
   .grid {
     height: 500px;
     width: 350px;
-  }
-  .grid h1 {
-    width: 300px;
   }
 
   .inicio {
     margin-left: 50px;
   }
   .salir {
-    margin-left: 240px;
+    margin-left: 220px;
   }
   .grid button {
     width: 100px;
     height: 40px;
-    font-size: var(--3jr-fontsize-s);
+  }
+  .grid h1 {
+    width: 350px;
   }
 }
 @media screen and (max-width: 300px) {
@@ -247,22 +181,21 @@
     height: 40px;
     font-size: var(--3jr-fontsize-xs);
   }
-  .grid {
-    height: 300px;
-  }
 }
 
-@media screen and (max-width: 268px) {
-  .grid h1 {
-    width: 200px;
-    margin-left: 20%;
-  }
+@media screen and (max-width: 250px) {
   .salir {
-    margin-left: 180px;
+    margin-left: 165px;
   }
   .grid button {
     width: 100px;
     height: 40px;
-    font-size: var(--3jr-fontsize-s);
+  }
+  .grid {
+    width: 250px;
+    margin-left: -40px;
+  }
+  .grid h1 {
+    width: 350px;
   }
 }

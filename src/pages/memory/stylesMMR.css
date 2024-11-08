@@ -2,19 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  height: 600px;
+  height: 700px;
   width: 600px;
   border-radius: 10px;
   border-color: var(--3jr-letterbotton);
   margin: auto;
-  margin-top: 150px;
+  margin-top: -70px;
   justify-content: center;
 }
 
 .tarjetas {
   display: flex;
-  width: 106px;
-  height: 90px;
+  width: 80px;
+  height: 70px;
   background-color: var(--3jr-terciary);
   border-radius: var(--3jr-border-radius);
   margin: 7px;
@@ -29,8 +29,8 @@
 .back-face {
   display: flex;
   position: absolute;
-  width: 106px;
-  height: 90px;
+  width: 80px;
+  height: 70px;
   align-items: center;
   justify-content: center;
   font-size: xx-large;

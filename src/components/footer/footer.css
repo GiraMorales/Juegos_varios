@@ -5,7 +5,7 @@ footer {
   letter-spacing: var(--3jr-margin-xs);
   justify-content: center;
   width: 100%;
-  margin-top: 1%;
+  margin-top: -30px;
 }
 @media screen and (max-width: 1000px) {
   footer {

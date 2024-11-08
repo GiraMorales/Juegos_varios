@@ -41,7 +41,7 @@ let letrasFallidas = [];
 export const iniciarLogicaJuego = () => {
   palabraSeleccionada = palabras[Math.floor(Math.random() * palabras.length)];
   palabraOculta = Array(palabraSeleccionada.length).fill('_');
-  intentosRestantes = 8;
+  intentosRestantes = 10;
   letrasFallidas = [];
 
   // Limpiar canvas y mostrar estado inicial
@@ -90,7 +90,7 @@ export const adivinarLetra = (letra) => {
       mensajeDisplay.textContent = 'Letra incorrecta.';
 
       // Llamada a dibujarAhorcado con el número de intentos fallidos
-      dibujarAhorcado(8 - intentosRestantes);
+      dibujarAhorcado(10 - intentosRestantes);
 
       if (intentosRestantes === 0) {
         mensajeDisplay.textContent = `Perdiste. La palabra era "${palabraSeleccionada}".`;
@@ -106,8 +106,8 @@ function dibujarAhorcado(intentos) {
   const canvas = document.getElementById('hangmanCanvas');
   const ctx = canvas.getContext('2d');
 
-  ctx.lineWidth = 2;
-  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = '#000';
 
   switch (intentos) {
     case 1: // Base

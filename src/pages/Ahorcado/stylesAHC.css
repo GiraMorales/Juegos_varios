@@ -1,13 +1,10 @@
-/* .tableroAHC {
-  background-color: #14ecab;
-  position: absolute;
-  margin-top: 25%;
-  margin-left: 3%;
-  height: 600px;
-  width: 600px;
+.tableroAHC {
+  background-color: var(--3jr-terciary);
+  height: 450px;
+  width: 500px;
   border-radius: 10px;
   border-color: var(--3jr-letterbotton);
-} */
+}
 
 /* Estilo para los mensajes y las letras */
 #message,
@@ -26,9 +23,36 @@ form {
 }
 
 #guessInput {
-  padding: 8px;
+  padding: 3px;
+  width: 110px;
   font-size: 1rem;
   border-radius: 5px;
-  border: 1px solid #ccc;
-  margin: 5%;
+  border: 1px solid #000000;
+  margin: 3%;
+}
+
+#hangmanCanvas {
+  margin-left: 50px;
+  width: 150px;
+  margin-top: 25px;
+  /* border: 10px solid var(--3jr-secondary); */
+}
+
+#wrongLetters {
+  position: absolute;
+  margin-top: -150px;
+  margin-left: 270px;
+}
+#message {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 220px;
+}
+#remainingAttempts {
+  visibility: hidden;
+}
+#word {
+  margin-top: 10px;
+  font-size: 35px;
+  margin-left: -240px;
 }

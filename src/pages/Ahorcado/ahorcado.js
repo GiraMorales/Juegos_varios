@@ -17,7 +17,6 @@ export const initAhorcado = () => {
   const palabraDisplay = document.createElement('p');
   const form = document.createElement('form');
   const inputLetra = document.createElement('input');
-  const submitButton = document.createElement('button');
   const canvas = document.createElement('canvas');
 
   // Configuración del canvas para el muñeco
@@ -35,15 +34,15 @@ export const initAhorcado = () => {
   palabraDisplay.id = 'word';
   inputLetra.id = 'guessInput';
   inputLetra.placeholder = 'Ingresa una letra';
-  submitButton.textContent = 'Adivinar';
 
-  form.append(inputLetra, submitButton);
+  form.append(inputLetra);
 
   //añadir clases
   divTablero.className = 'tableroAHC';
   buttonJugar.className = 'inicio';
   buttonSalir.className = 'salir';
   divContent.className = 'grid';
+
   // Agregar elementos al tablero
   divTablero.append(
     canvas,
@@ -57,14 +56,21 @@ export const initAhorcado = () => {
   divContent.innerHTML = ''; // Limpiar el contenido
   divContent.append(titulo, buttonJugar, divTablero, buttonSalir);
 
+  // Iniciar el juego automáticamente al cargar la página
+  iniciarLogicaJuego();
+
   // Eventos de botones
   buttonSalir.addEventListener('click', () => window.location.reload());
-  buttonJugar.addEventListener('click', iniciarLogicaJuego);
 
-  // Evento para el formulario
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    adivinarLetra(inputLetra.value.toLowerCase());
-    inputLetra.value = ''; // Limpiar el campo de entrada
+  // Botón "REINICIAR" ahora sirve para reiniciar el juego
+  buttonJugar.addEventListener('click', () => iniciarLogicaJuego());
+
+  // Evento para el input de texto al presionar Enter
+  inputLetra.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      adivinarLetra(inputLetra.value.toLowerCase());
+      inputLetra.value = ''; // Limpiar el campo de entrada
+    }
   });
 };

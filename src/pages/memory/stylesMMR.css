@@ -2,18 +2,18 @@
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  height: 450px;
-  width: 600px;
+  height: 400px;
+  width: 540px;
   border-radius: 10px;
   border-color: var(--3jr-letterbotton);
   margin: auto;
-  /* margin-top: -70px; */
+  margin-top: 20px;
   justify-content: center;
 }
 
 .tarjetas {
   display: flex;
-  width: 80px;
+  width: 70px;
   height: 70px;
   background-color: var(--3jr-terciary);
   border-radius: var(--3jr-border-radius);
@@ -110,19 +110,23 @@
 }
 @media screen and (max-width: 900px) {
   .tableroMMR {
-    height: 550px;
-    width: 600px;
-    margin-top: 130px;
+    height: 400px;
+    margin-top: 70px;
   }
+
   .tarjetas,
   .front-face,
   .back-face {
-    width: 100px;
+    width: 90px;
   }
 }
 @media screen and (max-width: 800px) {
+  .tableroMMR {
+    height: 350px;
+    margin-top: 150px;
+  }
   .grid {
-    height: 700px;
+    height: 550px;
     align-content: center;
   }
   .tarjetas,
@@ -141,17 +145,15 @@
     height: 60px;
   }
   .tableroMMR {
-    width: 500px;
-    margin-top: 70px;
-  }
-  .grid h1 {
-    width: 700px;
+    height: 350px;
+    width: 450px;
+    margin-top: 150px;
   }
 }
 
 @media screen and (max-width: 568px) {
   .tableroMMR {
-    height: 400px;
+    /* height: 400px; */
     width: 400px;
   }
   .tarjetas,

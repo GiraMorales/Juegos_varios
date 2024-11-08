@@ -5,13 +5,17 @@
     justify-content: center;
   }
   .portada {
-    width: 130%;
+    width: 150%;
+    margin-top: 20%;
+    margin-bottom: 20%;
   }
 }
 
 @media screen and (max-width: 1450px) {
   .portada {
-    width: 110%;
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
 }
 
@@ -39,7 +43,6 @@
     width: 75%;
     margin-top: 10%;
     margin-bottom: 10%;
-    margin-left: -18%;
   }
 }
 @media screen and (max-width: 700px) {
@@ -75,20 +78,20 @@
 
 @media screen and (max-width: 350px) {
   .portada {
-    width: 40%;
+    width: 30%;
     margin-left: -58%;
   }
 }
 
 @media screen and (max-width: 300px) {
   .portada {
-    width: 30%;
+    width: 20%;
     margin-left: -68%;
   }
 }
 @media screen and (max-width: 250px) {
   .portada {
-    width: 25%;
-    margin-left: -70%;
+    width: 15%;
+    margin-left: -74%;
   }
 }

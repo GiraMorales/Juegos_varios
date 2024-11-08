@@ -29,13 +29,13 @@ form {
   border-radius: 5px;
   border: 1px solid #000000;
   margin: 3%;
+  margin-top: 50px;
 }
 
 #hangmanCanvas {
   margin-left: 50px;
   width: 150px;
   margin-top: 25px;
-  /* border: 10px solid var(--3jr-secondary); */
 }
 
 #wrongLetters {
@@ -55,4 +55,71 @@ form {
   margin-top: 10px;
   font-size: 35px;
   margin-left: -240px;
+}
+
+@media screen and (max-width: 800px) {
+  .tableroAHC {
+    height: 400px;
+    width: 500px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .tableroAHC {
+    height: 400px;
+    width: 410px;
+    margin-left: 120px;
+  }
+  #word {
+    font-size: 25px;
+    margin-left: -200px;
+  }
+
+  #hangmanCanvas {
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .tableroAHC {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tableroAHC {
+    height: 400px;
+    width: 350px;
+    margin-left: 45px;
+  }
+  #word {
+    font-size: 20px;
+    margin-left: -145px;
+  }
+
+  #hangmanCanvas {
+    margin-left: 25px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tableroAHC {
+    height: 400px;
+    width: 290px;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  #word {
+    font-size: 15px;
+    margin-left: -115px;
+  }
+
+  #hangmanCanvas {
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .tableroAHC {
+    /* height: 200px; */
+    width: 210px;
+    margin-top: 100px;
+  }
 }

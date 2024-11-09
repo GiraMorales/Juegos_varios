@@ -39,7 +39,7 @@
     height: 360px;
     width: 350px;
     margin-top: 100px;
-    margin-left: 50px;
+    margin-left: 40px;
   }
 }
 
@@ -48,7 +48,7 @@
     height: 300px;
     width: 300px;
     margin-top: 180px;
-    margin-left: 35px;
+    margin-left: 25px;
   }
   .celda {
     font-size: var(--3jr-fontsize-l);
@@ -62,7 +62,7 @@
     height: 250px;
     width: 210px;
     margin-top: 250px;
-    margin-left: 15px;
+    margin-left: 5px;
   }
   #contenedor {
     margin-left: 15px;

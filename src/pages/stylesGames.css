@@ -133,10 +133,10 @@
     margin-top: 85px;
   }
   .inicio {
-    margin-left: 50px;
+    margin-left: 30px;
   }
   .salir {
-    margin-left: 270px;
+    margin-left: 250px;
   }
 }
 
@@ -172,9 +172,6 @@
   .grid button {
     width: 100px;
     height: 40px;
-  }
-  .grid h1 {
-    width: 350px;
   }
 }
 @media screen and (max-width: 300px) {

@@ -89,7 +89,8 @@ form {
   .tableroAHC {
     height: 400px;
     width: 350px;
-    margin-left: 45px;
+    margin-left: 25px;
+    margin-top: 110px;
   }
   #word {
     font-size: 20px;

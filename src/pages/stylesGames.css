@@ -123,6 +123,9 @@
     margin-left: 290px;
   }
 
+  .grid h1 {
+    width: 410px;
+  }
   .grid {
     height: 500px;
     width: 450px;

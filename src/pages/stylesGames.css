@@ -59,7 +59,6 @@
   .grid h1 {
     margin-top: var(--3jr-margin-l);
     font-size: var(--3jr-fontsize-m);
-    width: 100%;
     justify-content: space-around;
   }
   .grid {
@@ -108,7 +107,7 @@
     margin-left: 340px;
   }
   .grid h1 {
-    width: 400px;
+    width: 450px;
   }
   .grid {
     height: 600px;
@@ -153,6 +152,9 @@
   }
   .grid {
     width: 350px;
+  }
+  .grid h1 {
+    margin-left: -40px;
   }
 }
 @media screen and (max-width: 350px) {

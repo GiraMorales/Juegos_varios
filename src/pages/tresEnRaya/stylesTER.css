@@ -55,8 +55,6 @@
   }
   #contenedor {
     height: 800px;
-    /* width: 400px; */
-    /* margin-top: 20px; */
   }
 }
 @media screen and (max-width: 300px) {

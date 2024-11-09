@@ -81,12 +81,6 @@
   }
 }
 
-@media screen and (max-width: 350px) {
-  /* .portada {
-    width: 70%;
-  } */
-}
-
 @media screen and (max-width: 300px) {
   .portada {
     width: 70%;

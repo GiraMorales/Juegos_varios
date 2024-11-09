@@ -40,58 +40,63 @@
 
 @media screen and (max-width: 860px) {
   .portada {
-    width: 75%;
     margin-top: 10%;
     margin-bottom: 10%;
+  }
+  .content {
+    width: 700px;
   }
 }
 @media screen and (max-width: 700px) {
   .portada {
-    width: 65%;
-    margin-left: -28%;
     margin-top: 15%;
     margin-bottom: 15%;
   }
+  .content {
+    width: 600px;
+  }
 }
 @media screen and (max-width: 600px) {
-  .portada {
-    width: 60%;
-    margin-left: -35%;
+  .content {
+    width: 500px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .portada {
-    width: 50%;
-    margin-left: -45%;
+  .content {
+    width: 400px;
   }
 }
 
 @media screen and (max-width: 432px) {
   .portada {
-    width: 40%;
-    margin-left: -50%;
+    width: 80%;
     margin-top: 10%;
     margin-bottom: 10%;
+  }
+  .content {
+    width: 300px;
   }
 }
 
 @media screen and (max-width: 350px) {
-  .portada {
-    width: 30%;
-    margin-left: -58%;
-  }
+  /* .portada {
+    width: 70%;
+  } */
 }
 
 @media screen and (max-width: 300px) {
   .portada {
-    width: 20%;
-    margin-left: -68%;
+    width: 70%;
   }
 }
 @media screen and (max-width: 250px) {
   .portada {
-    width: 15%;
-    margin-left: -74%;
+    width: 80%;
+    margin-top: 20%;
+    margin-bottom: 10%;
+  }
+  .content {
+    width: 200px;
   }
 }

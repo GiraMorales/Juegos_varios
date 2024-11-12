@@ -21,23 +21,19 @@
   justify-content: center;
   color: var(--3jr-primary);
   width: 100%;
-  margin-top: -10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
-.salir {
-  margin-left: 453px;
-}
-.inicio {
-  margin-left: 95px;
-}
-.Reini_Marcador {
-  margin-left: 275px;
+.divBotones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .grid button {
   display: flex;
-  position: absolute;
-  margin-top: 70px;
   padding: var(--3jr-padding-m);
   width: 150px;
   height: 50px;
@@ -54,12 +50,6 @@
   }
 }
 @media screen and (max-width: 800px) {
-  .inicio {
-    margin-left: 75px;
-  }
-  .salir {
-    margin-left: 465px;
-  }
   .grid h1 {
     margin-top: var(--3jr-margin-l);
     font-size: var(--3jr-fontsize-m);
@@ -80,13 +70,6 @@
 }
 
 @media screen and (max-width: 700px) {
-  .inicio {
-    margin-left: 90px;
-  }
-  .salir {
-    margin-left: 390px;
-  }
-
   .grid {
     height: 600px;
     width: 600px;
@@ -101,15 +84,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .grid button {
-    margin-top: 95px;
-  }
-  .inicio {
-    margin-left: 43px;
-  }
-  .salir {
-    margin-left: 340px;
-  }
   .grid h1 {
     width: 450px;
   }
@@ -120,13 +94,6 @@
 }
 
 @media screen and (max-width: 500px) {
-  .inicio {
-    margin-left: 70px;
-  }
-  .salir {
-    margin-left: 290px;
-  }
-
   .grid h1 {
     width: 410px;
   }
@@ -139,18 +106,9 @@
   .grid button {
     margin-top: 85px;
   }
-  .inicio {
-    margin-left: 30px;
-  }
-  .salir {
-    margin-left: 250px;
-  }
 }
 
 @media screen and (max-width: 400px) {
-  .salir {
-    margin-left: 215px;
-  }
   .grid button {
     margin-top: 80px;
     width: 100px;
@@ -170,21 +128,12 @@
     width: 350px;
   }
 
-  .inicio {
-    margin-left: 50px;
-  }
-  .salir {
-    margin-left: 220px;
-  }
   .grid button {
     width: 100px;
     height: 40px;
   }
 }
 @media screen and (max-width: 300px) {
-  .salir {
-    margin-left: 180px;
-  }
   .grid button {
     width: 90px;
     height: 40px;
@@ -193,9 +142,6 @@
 }
 
 @media screen and (max-width: 250px) {
-  .salir {
-    margin-left: 16px;
-  }
   .grid button {
     width: 100px;
     height: 40px;

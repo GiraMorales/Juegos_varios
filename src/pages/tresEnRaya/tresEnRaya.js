@@ -8,11 +8,12 @@ export const initTresEnRaya = () => {
 
   //crear un titulo, boton y tablero
   const titulo = document.createElement('h1');
+  const divTablero = document.createElement('div');
+  const divMarcador = document.createElement('div');
+  const divBotones = document.createElement('div');
   const buttonNuevoJuego = document.createElement('button');
   const buttonSalir = document.createElement('button');
   const buttonReiniciarMarcador = document.createElement('button');
-  const divTablero = document.createElement('div');
-  const divMarcador = document.createElement('div');
 
   //añadir texto
   titulo.textContent = 'Tres en Raya';
@@ -26,6 +27,8 @@ export const initTresEnRaya = () => {
   buttonSalir.className = 'salir';
   buttonReiniciarMarcador.className = 'Reini_Marcador';
   divMarcador.className = 'marcador';
+  divBotones.className = 'divBotones';
+
   divContent.className = 'grid';
 
   // Inicializar marcador
@@ -46,12 +49,10 @@ export const initTresEnRaya = () => {
   divContent.innerHTML = '';
 
   //añadir los elementos
-  divContent.append(titulo);
-  divContent.append(divMarcador);
-  divContent.append(buttonReiniciarMarcador);
-  divContent.append(buttonNuevoJuego);
-  divContent.append(divTablero);
-  divContent.append(buttonSalir);
+  divContent.append(titulo, divBotones, divMarcador, divTablero);
+
+  // Añadir botones al contenedor de botones
+  divBotones.append(buttonNuevoJuego, buttonReiniciarMarcador, buttonSalir);
 
   //creación de celdas del tablero
   for (let i = 0; i < 9; i++) {

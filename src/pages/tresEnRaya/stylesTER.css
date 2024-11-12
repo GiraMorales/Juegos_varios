@@ -22,13 +22,12 @@
 .marcador {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 5px;
   font-size: 28px;
-  margin-top: 50px;
-  margin-bottom: -20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: var(--3jr-primary);
 }
-
 @media screen and (max-width: 800px) {
   .tableroTER {
     height: 400px;

@@ -3,6 +3,7 @@
 }
 
 .grid {
+  display: flex;
   margin: auto;
   display: grid;
   height: 670px;
@@ -20,24 +21,27 @@
   justify-content: center;
   color: var(--3jr-primary);
   width: 100%;
-  margin-top: -60px;
+  margin-top: -10px;
 }
 
 .salir {
-  margin-left: 420px;
+  margin-left: 453px;
 }
 .inicio {
   margin-left: 95px;
+}
+.Reini_Marcador {
+  margin-left: 275px;
 }
 
 .grid button {
   display: flex;
   position: absolute;
-  margin-top: 75px;
-  padding: 15px;
-  width: 180px;
+  margin-top: 70px;
+  padding: var(--3jr-padding-m);
+  width: 150px;
   height: 50px;
-  font-size: var(--3jr-fontsize-m);
+  font-size: var(--3jr-fontsize-s);
   align-items: center;
   justify-content: center;
   background-color: var(--3jr-botton);

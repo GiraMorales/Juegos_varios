@@ -19,6 +19,15 @@
   font-size: var(--3jr-fontsize-xl);
   cursor: point;
 }
+.marcador {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 28px;
+  margin-top: 50px;
+  margin-bottom: -20px;
+  color: var(--3jr-primary);
+}
 
 @media screen and (max-width: 800px) {
   .tableroTER {

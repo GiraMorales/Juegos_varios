@@ -3,6 +3,7 @@ import '../../pages/stylesGames.css';
 let ficha = 'X'; //ficha con la que empieza el jugador
 let tableroEstado = ['', '', '', '', '', '', '', '', '']; // nueve casillas del tablero
 let juegoActivo = true; //saber si el juego esta activo o no.
+let esTurnoJugador = true; // Variable para controlar el turno del jugador
 
 const combinacionesGanadoras = [
   [0, 1, 2],
@@ -32,13 +33,17 @@ const actualizarMarcador = (fichaGanadora, marcadorX, marcadorO) => {
 
 // Lógica del juego
 export const logicaTER = (celda, index, marcadorX, marcadorO) => {
-  if (celda.textContent === '' && juegoActivo) {
+  // Verificar si es el turno del jugador y si la celda está vacía
+  if (celda.textContent === '' && juegoActivo && esTurnoJugador) {
     celda.textContent = ficha;
     tableroEstado[index] = ficha;
     verificarGanador(marcadorX, marcadorO);
+
+    // Cambiar al turno de la IA
+    esTurnoJugador = false;
     ficha = ficha === 'X' ? 'O' : 'X';
 
-    // Si es el turno de la IA (ficha 'O'), hacer que juegue automáticamente
+    // Si es el turno de la IA, juega automáticamente
     if (juegoActivo && ficha === 'O') {
       setTimeout(() => jugarIA(marcadorX, marcadorO), 500);
     }
@@ -58,7 +63,10 @@ const jugarIA = (marcadorX, marcadorO) => {
     celda.textContent = 'O';
     tableroEstado[randomIndex] = 'O';
     verificarGanador(marcadorX, marcadorO);
+
+    // Cambiar el turno de nuevo al jugador
     ficha = 'X';
+    esTurnoJugador = true; // Ahora es el turno del jugador
   }
 };
 
@@ -78,6 +86,7 @@ const verificarGanador = (marcadorX, marcadorO) => {
     }
   }
 
+  // Verificar empate
   if (!tableroEstado.includes('')) {
     juegoActivo = false;
     alert('¡Es un empate!');
@@ -89,6 +98,7 @@ export const reiniciarJuego = (divTablero) => {
   tableroEstado = ['', '', '', '', '', '', '', '', ''];
   juegoActivo = true;
   ficha = 'X';
+  esTurnoJugador = true; // Reiniciamos el turno al jugador
 
   const celdas = divTablero.querySelectorAll('.celda');
   celdas.forEach((celda) => {
